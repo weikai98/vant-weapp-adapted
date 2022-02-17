@@ -1,0 +1,19 @@
+
+function rootClass (data) {
+  var classes = []
+  if (data.iconClass) { 
+    classes.push(data.iconClass)
+  }
+  if (data.icon) { 
+    classes.push('ipm-icon' + data.icon)
+  }
+  return classes.join(' ')
+}
+
+function rootStyle (data) {
+
+}
+
+
+module.exports.rootClass = rootClass
+module.exports.rootStyle = rootStyle

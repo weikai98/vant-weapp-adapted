@@ -1,0 +1,7 @@
+@import '../common/index.wxss';
+.hello {
+  background-color: red;
+  font-size: 12rpx;
+  color: red;
+  transform: none;
+}

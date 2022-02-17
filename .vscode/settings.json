@@ -1,0 +1,118 @@
+{
+  "telemetry.enableTelemetry": false,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "javascript.validate.enable": true,
+  "typescript.validate.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "postcss.validate": false,
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.fontWeight": "500",
+  "editor.minimap.enabled": false,
+  "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "html",
+      "typescript",
+      "typescriptreact",
+      "vue"
+  ],
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.scriptInitialIndent": true,
+  "vetur.format.styleInitialIndent": true,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatterOptions": {
+    //   "js-beautify-html": {
+    //       "wrap_attributes": "force-expand-multiline",
+    //       "wrap_line_length": 120
+    //   }
+  },
+  "beautify.config": {
+      "indent_size": 2,
+      "html": {
+          "wrap_attributes":"preserve",
+          "wrap_line_length": 120
+      },
+  },
+  "beautify.language": {
+      "js": {
+          "type": [
+              "javascript",
+              "json",
+              "jsonc"
+          ],
+          "filename": [
+              ".jshintrc",
+              ".jsbeautifyrc"
+          ]
+      },
+      "css": [
+          "css",
+          "less",
+          "scss"
+      ],
+      "html": [
+          "htm",
+          "html",
+          "wxml"
+      ]
+  },
+  "[wxml]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "vetur.validation.script": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.fontSize": 12,
+  "workbench.colorCustomizations": {
+      //  #使用带引号替代双引号
+      "prettier.singleQuote": true
+  },
+  "files.associations": {
+      "*.extension": "language",
+      "*.cjson": "jsonc",
+      "*.wxss": "css",
+      "*.wxs": "javascript"
+  },
+  "[vue]": {
+      "editor.defaultFormatter": "octref.vetur"
+  },
+  "editor.fontLigatures": true,
+  // commitizen 插件提交内容默认不在两端增加双引号
+  "editor.formatOnType": true,
+  "http.proxyAuthorization": null,
+  "notebook.displayOrder": [],
+  "prettier.semi": false,
+  "editor.lineHeight": 28,
+  "markdown-preview-enhanced.liveUpdate": false,
+  "markdown-preview-enhanced.breakOnSingleNewLine": false,
+  "markdown-preview-enhanced.scrollSync": false,
+  "workbench.iconTheme": "vscode-icons",
+  "git.suggestSmartCommit": false,
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+//   "[html]": {
+    //   "editor.defaultFormatter": "vscode.html-language-features"
+    // "editor.defaultFormatter": "octref.vetur"
+//   },
+  "explorer.confirmDelete": false,
+  "eslint.codeAction.showDocumentation": {
+      "enable": true
+  },
+  "editor.codeActionsOnSave": {
+      "source.fixAll": true
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.exclude": {
+      "**/.git": false
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "git.confirmSync": false,
+    "window.zoomLevel": 1,
+    "minapp-vscode.disableAutoConfig": true
+}

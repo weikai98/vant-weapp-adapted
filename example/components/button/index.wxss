@@ -1,0 +1,91 @@
+@import '../common/index.wxss';
+/* Transition
+-------------------------- */
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* Link
+-------------------------- */
+/* Border
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Typography
+-------------------------- */
+/* Size
+-------------------------- */
+/* z-index
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Icon
+-------------------------- */
+/* Button */
+.mu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.mu-button--default {
+  color: #606266;
+  background: #ffffff;
+  border: 1px solid #909399;
+}
+.mu-button--primary {
+  color: #ffffff;
+  background: #3863fc;
+  border: 1px solid #3863fc;
+}
+.mu-button--success {
+  color: #ffffff;
+  background: #67C23A;
+  border: 1px solid #67C23A;
+}
+.mu-button--info {
+  color: #ffffff;
+  background: #909399;
+  border: 1px solid #909399;
+}
+.mu-button--warning {
+  color: #ffffff;
+  background: #E6A23C;
+  border: 1px solid #E6A23C;
+}
+.mu-button--danger {
+  color: #ffffff;
+  background: #F56C6C;
+  border: 1px solid #F56C6C;
+}
+.mu-button--plain.mu-button--primary {
+  background: #ebefff;
+  color: #3863fc;
+}
+.mu-button--plain.mu-button--success {
+  background: #e1f3d8;
+  color: #67C23A;
+}
+.mu-button--plain.mu-button--info {
+  background: #e9e9eb;
+  color: #909399;
+}
+.mu-button--plain.mu-button--danger {
+  background: #fde2e2;
+  color: #F56C6C;
+}
+.mu-button--plain.mu-button--warning {
+  background: #faecd8;
+  color: #E6A23C;
+}
+.mu-button--round {
+  border-radius: 999px;
+}
