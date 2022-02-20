@@ -52,5 +52,6 @@
     "ChromeAndroid >= 53",
     "iOS >= 9"
   ],
-  "dependencies": {}
+  "dependencies": {
+  }
 }

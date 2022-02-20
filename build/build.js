@@ -8,6 +8,7 @@ const gulpConfig = path.resolve(__dirname, './gulp/gulp.component.js')
 function runBuild () { 
   exec(`npx gulp -f ${gulpConfig} buildTask`)
 }
+
 function runDev () { 
   exec(`npx gulp -f ${gulpConfig} watchTask`)
 }
