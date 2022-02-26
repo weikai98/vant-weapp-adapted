@@ -33,7 +33,7 @@
   "beautify.config": {
       "indent_size": 2,
       "html": {
-          "wrap_attributes":"preserve",
+          "wrap_attributes":"force-expand-multiline",
           "wrap_line_length": 120
       },
   },

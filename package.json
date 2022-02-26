@@ -38,7 +38,8 @@
   },
   "scripts": {
     "build:pro": "cross-env NODE_ENV=product node build/build.js ",
-    "build:dev": "cross-env NODE_ENV=development node build/build.js"
+    "build:dev": "cross-env NODE_ENV=development node build/build.js",
+    "new:comp": "node ./build/bin/new.js"
   },
   "files": [
     "dist",

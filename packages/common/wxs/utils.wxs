@@ -37,4 +37,9 @@ function breakUpMerge (name, options) {
   return joinClasses(name, classes)
 } 
 
+function isEmpty (value) { 
+  return value === '' || value === undefined || value === null
+}
+
 module.exports.breakUpMerge = breakUpMerge
+module.exports.isEmpty = isEmpty

@@ -1,18 +1,23 @@
-<!-- <wxs src="./index.wxs" module="computed" /> -->
-<wxs src="../common/wxs/utils.wxs" module="utils" />
+<wxs
+  src="../common/wxs/utils.wxs"
+  module="utils"
+/>
 
 <button
   class="{{ [utils.breakUpMerge('button', [type, size, {block, round, plain, circle, loading, disabled, unclickable: disabled || loading }])] }}"
-  bind:tap="tap">
+  bind:tap="tap"
+>
   <mu-icon
     wx:if="{{loading}}"
     icon="loading"
-    class="mu-button__icon mu-button__icon--loading" />
+    class="mu-button__icon mu-button__icon--loading"
+  />
   <mu-icon
     wx:if="{{!loading && (icon || iconClass)}}"
     icon="{{icon}}"
     iconClass="{{ iconClass }}"
-    class="mu-button__icon" />
+    class="mu-button__icon"
+  />
   <view class="mu-button__text">
     <slot></slot>
   </view>

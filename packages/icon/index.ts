@@ -15,7 +15,6 @@ VantComponent({
     icon: String
   },
   mounted () { 
-    console.log(this.data.iconClass)
   },
   data: {
   },

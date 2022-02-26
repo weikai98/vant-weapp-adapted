@@ -5,10 +5,10 @@ const { exec } = require('child_process')
 const gulp = require('gulp');
 const insert = require('gulp-insert');
 const less = require('gulp-less')
-const postcss = require('gulp-postcss')
+// const postcss = require('gulp-postcss')
 const ts = require('gulp-typescript')
 const rename = require('gulp-rename')
-const reporter = require('gulp-less-reporter')
+// const reporter = require('gulp-less-reporter')
 // const logger = require('gulp-logger')
 // 避免使用 Node 的 path 类方法来创建 glob，例如 path.join。
 // 在 Windows 中，由于 Node 使用 \\ 作为路径分隔符，因此将会产生一个无效的 glob。
@@ -16,15 +16,15 @@ const reporter = require('gulp-less-reporter')
 // const src = path.resolve(__dirname, '../packages');
 // const dist = path.resolve(__dirname, '../dist')
 
-const libConfig = path.resolve(__dirname, '../tsconfig.lib.json');
-const esConfig = path.resolve(__dirname, '../tsconfig.json');
+// const libConfig = path.resolve(__dirname, '../tsconfig.lib.json');
+// const esConfig = path.resolve(__dirname, '../tsconfig.json');
 
 const tsProject = ts.createProject('../../tsconfig.json');
 
 
 
 const src = '../../packages/**/*'
-const exampleDist = '../../example/dist/'
+// const exampleDist = '../../example/dist/'
 const dist = '../../example/dist/'
 const baseCssPath = path.resolve(__dirname, '../../packages/common/index.wxss');
 
@@ -42,7 +42,7 @@ const lessTask = () => {
   return gulp
     .src(`${src}.less`)
     .pipe(less())
-    .on('error', reporter)
+    // .on('error', reporter)
     .pipe(
       insert.transform((contents, file) => { 
         // 不是common文件夹
@@ -82,26 +82,22 @@ const wxsTask = () => {
   return copierTask(`${src}.wxs`, dist)
 }
 
-// const otherTask = () => { 
-//   return copierTask(`${src}.*`, dist)
-// }
 
-const buildTask = gulp.series(
+exports.buildTask = gulp.series(
   cleanerTask,
-  gulp.parallel(lessTask, jsonTask, tsTask, wxmlTask, wxsTask)
+  // lessTask, jsonTask, tsTask, wxmlTask, wxsTask
+  gulp.parallel(jsonTask,tsTask, wxmlTask, wxsTask, lessTask)
 )
 
-const watchTask = () => {
-  // gulp.series(cleanerTask, gulp.parallel(lessTask, jsonTask, tsTask, wxmlTask, wxsTask))
-  console.log('watch...')
+exports.watchTask = () => {
+  console.time('打包中...')
+
+  console.timeEnd('打包中...')
   gulp.watch(`${src}.less`, lessTask);
   gulp.watch(`${src}.wxml`, wxmlTask);
   gulp.watch(`${src}.json`, jsonTask);
   gulp.watch(`${src}.ts`, tsTask);
   gulp.watch(`${src}.wxs`, wxsTask);
-}
+  console.log('watch...')
 
-module.exports = {
-  watchTask,
-  buildTask
 }

@@ -1,0 +1,44 @@
+<!-- 单元格设计 -->
+<wxs
+  src="../common/wxs/utils.wxs"
+  module="utils"
+/>
+
+<view
+  class="{{ [utils.breakUpMerge('cell')] }}"
+  bind:tap="click"
+>
+  <view class="mu-cell__left">
+    <mu-icon
+      wx:if="{{leftIcon}}"
+      icon="{{leftIcon}}"
+      class="mu-cell__left__icon"
+    />
+    <slot name="useLabel"></slot>
+    <view class="mu-cell__left__label">
+      <block wx:if="{{!utils.isEmpty(describe)}}">
+        <view class="mu-cell__left__label__title">
+          {{title}}
+        </view>
+        <view class="mu-cell__left__label__describe">
+          {{describe}}
+        </view>
+      </block>
+      <block wx:else>
+        {{title}}
+      </block>
+    </view>
+  </view>
+  <view class="mu-cell__right">
+    <slot name="useValue"></slot>
+    <view class="mu-cell__right__value">
+      {{value}}
+    </view>
+    <mu-icon
+      wx:if="{{rightIcon || isLink}}"
+      icon="{{isLink ? 'right' : rightIcon}}"
+      class="mu-cell__right__icon"
+    >
+    </mu-icon>
+  </view>
+</view>

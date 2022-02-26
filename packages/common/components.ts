@@ -34,8 +34,10 @@ function VantComponent<
   Data extends WechatMiniprogram.Component.DataOption,
   Props extends WechatMiniprogram.Component.PropertyOption,
   Methods extends WechatMiniprogram.Component.MethodOption
-> (vantOptions: VantComponentOptions<Data, Props, Methods>) { 
-  const options:WechatMiniprogram.Component.Options<Data, Props, Methods> = {}
+  > (vantOptions: VantComponentOptions<Data, Props, Methods>) { 
+  
+  const options: WechatMiniprogram.Component.Options<Data, Props, Methods> = {}
+  
   mapKeys(vantOptions, options, {
     data: 'data',
     props: 'properties',
@@ -75,7 +77,7 @@ function VantComponent<
 
   // add default options
   options.options = {
-    multipleSlots: true,
+    multipleSlots: true, // 使用多插槽
     addGlobalClass: true,
   };
 

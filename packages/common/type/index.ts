@@ -17,7 +17,8 @@ export type VantComponentOptions<
     field?: boolean
     classes?: string[]
     mixins?: string[]
-    props?: Props,
+    options?: WechatMiniprogram.Component.ComponentOptions
+    props?: Props
     relation?: {
       relations: Record<string, WechatMiniprogram.Component.RelationOption>;
       mixin: string;

@@ -10,6 +10,7 @@ function runBuild () {
 }
 
 function runDev () { 
+  console.log(`npx gulp -f ${gulpConfig} watchTask`)
   exec(`npx gulp -f ${gulpConfig} watchTask`)
 }
 if (process.env.NODE_ENV === 'product') {

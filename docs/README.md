@@ -1,5 +1,25 @@
 ## 低配版: 开发一两个组件，demo 采用静态页面形式
 
+### 1. class 规范
+
+以 mu-button 为例
+
+```javascript
+
+.mu-button--[type]
+
+ --[type] type属于对button或者其子元素的描述
+
+.mu-button__icon
+.mu-button__text
+
+__[ChildrenNode] ChildrenNode 属于前一样式的子元素
+
+.mu-button__icon--loading
+
+
+```
+
 1. packages 添加开发的组件
 2. example/app.json  
    注册组件(将 packages 中的组件经过编译打包才能使用)、

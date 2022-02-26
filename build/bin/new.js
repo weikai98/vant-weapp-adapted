@@ -10,6 +10,9 @@
 process.on('exit', () => {
   console.log();
 });
+// console.log(process.argv)
+// console.log(process.env.npm_config_argv)
+// process.exit(1);
 
 if (!process.argv[2]) {
   console.error('[组件名]必填 - Please enter new component name');
@@ -21,6 +24,7 @@ console.log('创建组件中...')
 
 const componentname = process.argv[2];
 const chineseName = process.argv[3] || componentname;
+const componentType = process.argv[4] || 'basic'
 
 const packages = '../../packages'
 const example = '../../example'
@@ -88,7 +92,7 @@ const exampleFiles = [
     filename: 'index.json',
     content: `{
   "usingComponents": {
-    "mu-componentname": "../../dist/${componentname}"
+    "mu-${componentname}": "../../dist/${componentname}"
   }
 }`
   },
@@ -98,7 +102,6 @@ const exampleFiles = [
 
 Page({
   data: {
-    list
   },
 });
 `
@@ -125,7 +128,8 @@ fs.mkdir(examplePagePath, (err) => {
 // 添加menuList菜单
 
 const exampleMenuList = require(`${example}/common/menuList.js`)
-exampleMenuList[0].list.push({
+const examplaMenuItem = exampleMenuList.find(menuItem => menuItem.type === componentType)
+examplaMenuItem.list.push({
   path: `/${componentname}`,
   title: `${componentname} ${chineseName}`
 })
