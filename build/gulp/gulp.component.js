@@ -39,6 +39,8 @@ const copierTask = (path, targetPath) => {
  }
 
 const lessTask = () => {
+  // Less 文件目前编译有问题 后续采用 lessc 编译
+  // npx lessc .\packages\icon\index.less .\example\dist\icon\index.css
   return gulp
     .src(`${src}.less`)
     .pipe(less())

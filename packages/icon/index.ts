@@ -8,10 +8,8 @@ VantComponent({
     },
     size: {
       type: String,
-      value: '12'
+      value: '16'
     },
-
-    disabled: Boolean,
     icon: String
   },
   mounted () { 
@@ -19,6 +17,8 @@ VantComponent({
   data: {
   },
   methods: {
-    
+    click (e:WechatMiniprogram.TouchEvent) { 
+      this.$emit('tap', e)
+    }
   }
 })

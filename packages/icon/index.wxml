@@ -1,7 +1,13 @@
-<wxs src="./index.wxs"
-  module="computed" />
-<wxs src="../common/wxs/utils.wxs"
-  module="utils" />
+<wxs
+  src="./index.wxs"
+  module="computed"
+/>
+<wxs
+  src="../common/wxs/utils.wxs"
+  module="utils"
+/>
 <view
-  class="ipm-icon {{ [ computed.rootClass({ icon, iconClass}), utils.breakUpMerge('icon', [size, {disabled, unclickable: disabled }]) ] }}">
+  class="ipm-icon {{ [ computed.rootClass({ icon, iconClass}), utils.breakUpMerge('icon', [size]) ] }}"
+  bind:tap="click"
+>
 </view>
