@@ -1,0 +1,70 @@
+<view>弹出位置</view>
+<mu-cell
+  title="show top Popup"
+  isLink
+  bind:tap="showTop"
+></mu-cell>
+<mu-cell
+  title="show bottom Popup"
+  isLink
+  bind:tap="showBottom"
+></mu-cell>
+<mu-cell
+  title="show left Popup"
+  isLink
+  bind:tap="showLeft"
+></mu-cell>
+<mu-cell
+  title="show right Popup"
+  isLink
+  bind:tap="showRight"
+></mu-cell>
+<mu-cell
+  title="show center Popup"
+  isLink
+  bind:tap="showCenter"
+></mu-cell>
+
+<mu-popup
+  show="{{popupVisiable}}"
+  position="{{position}}"
+  round
+  bind:close="closePopup"
+  bind:clickModal="clickModal"
+>
+</mu-popup>
+
+
+<view>关闭按钮</view>
+<mu-cell
+  title="show bottom Popup"
+  isLink
+  closeable
+  bind:tap="showCloseable"
+></mu-cell>
+<mu-popup
+  show="{{closeablePopupVisiable}}"
+  position="bottom"
+  closeable
+  outsideCloseIcon
+  closeIconPosition="left"
+  bind:close="closePopup"
+  bind:clickModal="clickModal"
+>
+</mu-popup>
+
+
+<view>圆角弹窗</view>
+<mu-cell
+  title="show bottom Popup"
+  isLink
+  bind:tap="showRound"
+></mu-cell>
+<mu-popup
+  show="{{roundPopupVisiable}}"
+  position="bottom"
+  round
+  bind:close="closePopup"
+  bind:clickModal="clickModal"
+>
+</mu-popup>

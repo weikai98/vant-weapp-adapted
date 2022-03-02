@@ -1,0 +1,13 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+></wxs>
+
+
+<view
+  wx:if="{{show}}"
+  class="{{ utils.bem('modal') }}"
+  bind:tap="onModalClick"
+>
+  <slot />
+</view>

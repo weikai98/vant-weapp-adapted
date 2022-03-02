@@ -1,0 +1,21 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+></wxs>
+
+
+<mu-modal
+  show="{{show}}"
+  bind:clickModal="onModalClick"
+>
+  <view class="custom-class {{utils.bem('popup', [position, {round}])}}">
+    <mu-icon
+      wx:if="{{closeable}}"
+      size="24"
+      icon="{{closeIcon ? closeIcon : 'close'}}"
+      class="{{utils.bem('popup__close-icon', [closeIconPosition, {outsideCloseIcon}])}}"
+      bind:tap="onClockCloseIcon"
+    ></mu-icon>
+    <slot />
+  </view>
+</mu-modal>

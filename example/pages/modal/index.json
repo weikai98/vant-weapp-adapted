@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mu-modal": "../../dist/modal",
+    "mu-cell": "../../dist/cell"
+  }
+}

@@ -2,6 +2,7 @@
   <mu-cell
     title="单元格"
     value="内容"
+    border
   />
   <mu-cell
     title="单元格"

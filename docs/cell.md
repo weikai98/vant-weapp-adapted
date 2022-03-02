@@ -18,6 +18,7 @@
      leftIcon: string
      rightIcon: string
      isLink: Boolean
+     border: Boolean
      tap: (e: Event) => void
    }
 

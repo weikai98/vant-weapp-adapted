@@ -29,7 +29,7 @@ function joinClasses (name, classes) {
   return classes.join(' ')
 }
 
-function breakUpMerge (name, options) { 
+function bem (name, options) { 
   var classes = []
   // 获取classes
   traversing(classes, options)
@@ -41,5 +41,5 @@ function isEmpty (value) {
   return value === '' || value === undefined || value === null
 }
 
-module.exports.breakUpMerge = breakUpMerge
+module.exports.bem = bem
 module.exports.isEmpty = isEmpty

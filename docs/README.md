@@ -1,6 +1,8 @@
 ## 低配版: 开发一两个组件，demo 采用静态页面形式
 
-### 1. class 规范
+### 1. class 规范 bem
+
+block-name\_\_element-name--modifier-name，也就是模块名 + 元素名 + 修饰器名。
 
 以 mu-button 为例
 
@@ -30,7 +32,7 @@ __[ChildrenNode] ChildrenNode 属于前一样式的子元素
 
 开发一套基于小程序的组件库
 
-1. 工具: 支持 less、ts 编译
+1. 工具: 支持 less、ts 编译, Less 文件目前使用 gulp-less ts 使用 gulp-ts 后续采用 lessc tsc 编译
 2. 工程化: eslint + Prettier 代码格式化
 3. 自动化测试: jest
 4. 打包工具: gulp、rollup || vite

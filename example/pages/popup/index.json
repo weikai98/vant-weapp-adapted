@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mu-popup": "../../dist/popup",
+    "mu-cell": "../../dist/cell"
+  }
+}

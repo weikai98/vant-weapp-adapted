@@ -3,14 +3,18 @@
 
 .mu-cell {
   .flex(row);
-  // width: 100%;
   font-size: @--cell-font-size;
   color: @--cell-font-color;
-  padding: @--padding-base * 2 @--padding-base * 4;
+  margin: 0 @--margin-base * 4;
+  padding: @--padding-base * 3 0;
   vertical-align: center;
+  &--border {
+    border-bottom: @--border-base;
+  }
   &__left {
     .flex(row, center, start);
     flex: auto;
+    line-height: 48rpx;
     &__icon {
       margin-right: @--margin-base;
     }

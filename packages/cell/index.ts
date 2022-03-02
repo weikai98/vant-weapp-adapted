@@ -11,6 +11,10 @@ VantComponent({
     describe: String,
     leftIcon: String,
     rightIcon: String,
+    border: {
+      type: Boolean,
+      value: true
+    }
   },
   methods: {
     click (e: WechatMiniprogram.TouchEvent) {

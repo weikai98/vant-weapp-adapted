@@ -1,0 +1,12 @@
+<mu-cell
+  title="显示Modal"
+  bind:tap="openModal"
+  isLink
+></mu-cell>
+
+<mu-modal
+  show="{{modalVisiable}}"
+  bind:clickModal="clickModal"
+>
+  <view>Modal内容</view>
+</mu-modal>

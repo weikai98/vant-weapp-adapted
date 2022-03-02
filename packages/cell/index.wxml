@@ -5,7 +5,7 @@
 />
 
 <view
-  class="{{ [utils.breakUpMerge('cell')] }}"
+  class="{{ [utils.bem('cell', [{border}])] }}"
   bind:tap="click"
 >
   <view class="mu-cell__left">

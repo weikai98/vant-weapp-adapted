@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mu-modal": "../modal/index",
+    "mu-icon": "../icon/index"
+  }
+}

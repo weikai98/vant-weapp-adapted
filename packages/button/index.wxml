@@ -4,7 +4,7 @@
 />
 
 <button
-  class="{{ [utils.breakUpMerge('button', [type, size, {block, round, plain, circle, loading, disabled, unclickable: disabled || loading }])] }}"
+  class="{{ [utils.bem('button', [type, size, {block, round, plain, circle, loading, disabled, unclickable: disabled || loading }])] }}"
   bind:tap="tap"
 >
   <mu-icon
