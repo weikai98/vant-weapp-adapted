@@ -1,0 +1,99 @@
+<mu-button-group>
+  <mu-button type="primary">上一页</mu-button>
+  <mu-button type="primary">下一页</mu-button>
+  <mu-button type="primary">下1一页</mu-button>
+  <mu-button type="primary">下2一页</mu-button>
+  <mu-button type="primary">上一页</mu-button>
+  <mu-button type="primary">下一页</mu-button>
+  <mu-button type="primary">下1一页</mu-button>
+  <mu-button type="primary">下2一页</mu-button>
+  <mu-button type="primary">上一页</mu-button>
+  <mu-button type="primary">下一页</mu-button>
+  <mu-button type="primary">下1一页</mu-button>
+  <mu-button type="primary">下2一页</mu-button>
+</mu-button-group>
+
+
+<mu-button-group>
+  <mu-button
+    type="primary"
+    icon="search"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="up"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="left"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="right"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="search"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="up"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="left"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="right"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="search"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="up"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="left"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="right"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="search"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="up"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="left"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="right"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="search"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="up"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="left"
+  ></mu-button>
+  <mu-button
+    type="primary"
+    icon="right"
+  ></mu-button>
+  <view>确定</view>
+</mu-button-group>

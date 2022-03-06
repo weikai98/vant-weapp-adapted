@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mu-button": "../../dist/button",
+    "mu-button-group": "../../dist/button-group"
+  }
+}

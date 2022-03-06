@@ -3,8 +3,7 @@ import { VantComponent } from "../common/components";
 VantComponent({
   props: { 
     iconClass: {
-      type: String,
-      value: 'ipm-icon'
+      type: String
     },
     size: {
       type: String,

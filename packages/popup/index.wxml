@@ -6,6 +6,7 @@
 
 <mu-modal
   show="{{show}}"
+  lockScroll="{{lockScroll}}"
   bind:clickModal="onModalClick"
 >
   <view class="custom-class {{utils.bem('popup', [position, {round}])}}">

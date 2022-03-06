@@ -8,6 +8,7 @@
   wx:if="{{show}}"
   class="{{ utils.bem('modal') }}"
   bind:tap="onModalClick"
+  catch:touchmove="{{lockScroll ? 'touchmove' : ''}}"
 >
   <slot />
 </view>

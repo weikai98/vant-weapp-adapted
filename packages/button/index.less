@@ -14,8 +14,12 @@
   padding: 0 !important;
   width: auto !important;
   font-size: @--button-font-size;
-  border-radius: @--button-border-radius;
   
+  // reset weapp default border
+  &::after {
+    border-width: 0;
+  }
+
   &--normal {
     .button-size(8px, 16px, @--button-font-size, @--button-border-radius);
   }
@@ -105,6 +109,9 @@
   
   &__text {
     display: inline;
+  }
+  &__icon {
+    line-height: 19px;
   }
   &__icon+&__text:not(:empty) { 
     margin-left: @--margin-base;

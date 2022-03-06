@@ -12,10 +12,6 @@ VantComponent({
       value: 'center'
     }, 
     round: Boolean,
-    // overlay: {
-    //   type: Boolean,
-    //   value: true
-    // }, 
     closeOnClickModal: {
       type: Boolean,
       value: true

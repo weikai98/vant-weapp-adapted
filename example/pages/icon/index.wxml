@@ -1,10 +1,43 @@
 <view>
   <view>普通图标</view>
 
-  <mu-icon icon="wechat" size="12" />
-  <mu-icon icon="down" size="14" />
+  <mu-icon
+    icon="wechat"
+    size="12"
+  />
+  <mu-icon
+    icon="down"
+    size="14"
+  />
   <mu-icon icon="right" />
-  <mu-icon icon="up" size="20" />
-  <mu-icon icon="left" size="24" />
+  <mu-icon
+    icon="up"
+    size="20"
+  />
+  <mu-icon
+    icon="left"
+    size="24"
+  />
+
+
+  <view>iconClass图标</view>
+
+  <mu-icon
+    icon-class="ipm-iconwechat"
+    size="12"
+  />
+  <mu-icon
+    icon-class="ipm-icondown"
+    size="14"
+  />
+  <mu-icon icon-class="ipm-iconright" />
+  <mu-icon
+    icon-class="ipm-iconup"
+    size="20"
+  />
+  <mu-icon
+    icon-class="ipm-iconleft"
+    size="24"
+  />
 
 </view>

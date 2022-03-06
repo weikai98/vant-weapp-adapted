@@ -1,6 +1,7 @@
 import { VantComponent } from "../common/components";
 
 VantComponent({
+  
   props: { 
     type: {
       type: String,
