@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "mu-cell-group": "../../dist/cell-group"
+    "mu-cell-group": "../../dist/cell-group",
+    "mu-cell": "../../dist/cell"
   }
 }

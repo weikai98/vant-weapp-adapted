@@ -1,3 +1,7 @@
 import { VantComponent } from "../common/components";
 
-VantComponent({})
+VantComponent({
+  props: {
+    inset: Boolean
+  }
+})

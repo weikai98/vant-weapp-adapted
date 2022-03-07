@@ -1,0 +1,7 @@
+ page {
+   background: #dddddd;
+ }
+ 
+ .cell-group-page {
+  margin: 16px;
+ }

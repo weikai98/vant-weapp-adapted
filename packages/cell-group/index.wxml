@@ -1,0 +1,8 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+></wxs>
+
+<view class="{{utils.bem('cell-group', [{inset}]) }}">
+  <slot />
+</view>

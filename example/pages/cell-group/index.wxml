@@ -1,0 +1,48 @@
+<view class="cell-group-page">
+  <mu-cell-group inset>
+    <mu-cell
+      title="单元格"
+      value="内容"
+    />
+    <mu-cell
+      title="单元格"
+      value="内容"
+    />
+    <mu-cell
+      title="单元格"
+      value="内容"
+      describe="描述内容"
+    />
+    <!-- <mu-cell
+      title="单元格"
+      value="内容"
+      left-icon="up"
+      describe="描述内容"
+    /> -->
+  </mu-cell-group>
+</view>
+
+
+<view class="cell-group-page">
+  <mu-cell-group>
+    <mu-cell
+      title="单元格"
+      value="内容"
+    />
+    <mu-cell
+      title="单元格"
+      value="内容"
+    />
+    <mu-cell
+      title="单元格"
+      value="内容"
+      describe="描述内容"
+    />
+    <!-- <mu-cell
+      title="单元格"
+      value="内容"
+      left-icon="up"
+      describe="描述内容"
+    /> -->
+  </mu-cell-group>
+</view>
