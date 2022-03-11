@@ -11,8 +11,12 @@ VantComponent({
       type: String,
       value: 'center'
     }, 
+    mask: {
+      type: Boolean,
+      value: true
+    },
     round: Boolean,
-    closeOnClickModal: {
+    closeOnClickMask: {
       type: Boolean,
       value: true
     },
@@ -37,9 +41,9 @@ VantComponent({
     onClockCloseIcon () { 
       this.$emit('close')
     },
-    onModalClick () {
-      this.$emit('clickModal')
-      if (this.data.closeOnClickModal) {
+    onMaskClick () {
+      this.$emit('clickMask')
+      if (this.data.closeOnClickMask) {
         this.$emit('close')
       }
     },

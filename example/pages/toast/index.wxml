@@ -1,0 +1,6 @@
+<mu-toast
+  show="{{true}}"
+  mask
+  type="success"
+  message="加载中..."
+></mu-toast>

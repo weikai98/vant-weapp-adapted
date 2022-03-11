@@ -7,7 +7,7 @@
 <mu-modal
   show="{{show}}"
   lockScroll="{{lockScroll}}"
-  bind:clickModal="onModalClick"
+  bind:clickMask="onMaskClick"
 >
   <view class="custom-class {{utils.bem('popup', [position, {round}])}}">
     <mu-icon

@@ -92,7 +92,7 @@ const exampleFiles = [
     filename: 'index.json',
     content: `{
   "usingComponents": {
-    "mu-${componentname}": "../../dist/${componentname}"
+    "mu-${componentname}": "../../dist/${componentname}/"
   }
 }`
   },

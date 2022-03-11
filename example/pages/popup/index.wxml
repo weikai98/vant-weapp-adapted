@@ -30,7 +30,7 @@
   position="{{position}}"
   round
   bind:close="closePopup"
-  bind:clickModal="clickModal"
+  bind:clickMask="clickMask"
 >
 </mu-popup>
 
@@ -49,7 +49,7 @@
   outsideCloseIcon
   closeIconPosition="left"
   bind:close="closePopup"
-  bind:clickModal="clickModal"
+  bind:clickMask="clickMask"
 >
 </mu-popup>
 
@@ -65,6 +65,6 @@
   position="bottom"
   round
   bind:close="closePopup"
-  bind:clickModal="clickModal"
+  bind:clickMask="clickMask"
 >
 </mu-popup>

@@ -1,0 +1,13 @@
+
+function getIconByType (type) {
+  console.log(type)
+  var iconMap = {
+    loading: 'loading1',
+    success: 'check-circle-fill',
+    fail: 'warning-circle-fill'
+  }
+  return iconMap[type]
+ }
+
+
+module.exports.getIconByType = getIconByType

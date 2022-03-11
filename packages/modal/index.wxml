@@ -6,8 +6,9 @@
 
 <view
   wx:if="{{show}}"
-  class="{{ utils.bem('modal') }}"
-  bind:tap="onModalClick"
+  class="{{ utils.bem('modal', [{transparent}]) }}"
+  style="z-index: {{zIndex}}"
+  bind:tap="onMaskClick"
   catch:touchmove="{{lockScroll ? 'touchmove' : ''}}"
 >
   <slot />

@@ -1,12 +1,12 @@
 <mu-cell
-  title="显示Modal"
-  bind:tap="openModal"
+  title="显示Mask"
+  bind:tap="openMask"
   isLink
 ></mu-cell>
 
 <mu-modal
   show="{{modalVisiable}}"
-  bind:clickModal="clickModal"
+  bind:clickMask="clickMask"
 >
-  <view>Modal内容</view>
+  <view>Mask内容</view>
 </mu-modal>

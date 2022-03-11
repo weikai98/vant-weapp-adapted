@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "mu-button": "../../dist/button",
-    "mu-icon": "../../dist/icon"
+    "mu-button": "../../dist/button/index",
+    "mu-icon": "../../dist/icon/index"
   }
 }

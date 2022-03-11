@@ -16,13 +16,13 @@ type PropType = {
   zIndex: Number // 层级
   position: String // bottom top left right center
   round: Boolean // 圆角
-  Modal: Boolean // 显示遮罩
-  closeOnClickModal: Boolean // 点击遮罩是否关闭弹窗
+  mask: Boolean // 显示遮罩
+  closeOnClickMask: Boolean // 点击遮罩是否关闭弹窗
   closeable: Boolean // 显示关闭按钮
   closeIcon: String // 自定义关闭图标
   lockScroll: Boolean // 锁定背景滚动
 
-  clickModal: () => void // 点击遮罩
+  clickMask: () => void // 点击遮罩
 
   beforeClose: () => void // 关闭前触发
   close: () => void // 关闭时触发

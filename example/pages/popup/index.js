@@ -17,7 +17,7 @@ Page({
       roundPopupVisiable: false,
     })
    },
-  clickModal () { 
+  clickMask () { 
     this.setData({ popupVisiable: false })
   },
   showCenter () {

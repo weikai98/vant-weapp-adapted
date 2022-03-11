@@ -4,10 +4,10 @@ Page({
   data: {
     modalVisiable: false
   },
-  clickModal () { 
+  clickMask () { 
     this.setData({modalVisiable: false})
   },
-  openModal () { 
+  openMask () { 
     this.setData({modalVisiable: true})
   }
 });

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "mu-toast": "../../dist/toast"
+  }
+}
