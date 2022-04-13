@@ -1,6 +1,45 @@
-<mu-toast
-  show="{{true}}"
-  mask
-  type="success"
-  message="加载中..."
-></mu-toast>
+<mu-cell-group inset>
+  <mu-cell
+    title="打开文字Toast"
+    isLink
+    bind:tap="openToast"
+  />
+  <mu-cell
+    title="打开Loading"
+    isLink
+    bind:tap="openToast"
+    data-type="loading"
+  />
+  <mu-cell
+    title="打开Success"
+    isLink
+    bind:tap="openToast"
+    data-type="success"
+  />
+  <mu-cell
+    title="打开Fail"
+    isLink
+    bind:tap="openToast"
+    data-type="fail"
+  />
+
+  <mu-cell
+    title="打开自定义图标"
+    isLink
+    bind:tap="openIconToast"
+  />
+
+  <mu-cell
+    title="打开遮罩"
+    isLink
+    bind:tap="openMaskToast"
+  />
+
+  <mu-cell
+    title="位置"
+    isLink
+    bind:tap="openPositionToast"
+  />
+</mu-cell-group>
+
+<mu-toast id="mu-toast" />

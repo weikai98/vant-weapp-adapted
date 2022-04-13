@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "mu-toast": "../../dist/toast"
+    "mu-toast": "../../dist/toast",
+    "mu-cell": "../../dist/cell",
+    "mu-cell-group": "../../dist/cell-group"
   }
 }

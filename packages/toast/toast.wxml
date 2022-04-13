@@ -1,0 +1,31 @@
+<view
+  class="mu-toast__wrapper"
+  style="z-index: {{zIndex}}"
+>
+  <view class="{{utils.bem('toast', [type, position,  'zIndex-' + zIndex, {icon: !!computed.getIconByType(type) }])}}">
+    <rich-text wx:if="{{type === 'text'}}">{{message}}</rich-text>
+    <!-- <rich-text wx:elif="{{type === 'html'}}">{{message}}</rich-text> -->
+    <block wx:else>
+      <mu-icon
+        wx:if="{{type === 'loading'}}"
+        class="mu-toast__icon mu-toast__icon--loading"
+        size="36"
+        icon="loading1"
+      ></mu-icon>
+      <mu-icon
+        wx:else
+        class="mu-toast__icon"
+        size="36"
+        iconClass="{{icon || computed.getIconByType(type)}}"
+        icon="{{icon || computed.getIconByType(type)}}"
+      ></mu-icon>
+      <view
+        wx:if="{{message}}"
+        class="mu-toast__text"
+      >
+        {{message}}
+      </view>
+    </block>
+    <slot />
+  </view>
+</view>

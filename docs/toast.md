@@ -23,4 +23,15 @@
    }
    ```
 
-2.
+#### API
+
+```javascript
+  方法名	                 参数	             返回值	     介绍
+  Toast	                  options | message	toast 实例	展示提示
+  Toast.loading	          options | message	toast 实例	展示加载提示
+  Toast.success	          options | message	toast 实例	展示成功提示
+  Toast.fail	            options | message	toast 实例	展示失败提示
+  Toast.clear	            clearAll	              void	关闭提示
+  Toast.setDefaultOptions	options	                void	修改默认配置，对所有 Toast 生效
+  Toast.resetDefaultOptions	-	                    void	重置默认配置，对所有 Toast 生效
+```

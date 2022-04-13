@@ -2,6 +2,10 @@ import { VantComponent } from "../common/components";
 
 VantComponent({
   props: {
+    id: {
+      type: String,
+      value: 'mu-toast'
+    },
     show: Boolean,
     type: {
       type: String, // loading success fail text
@@ -9,7 +13,7 @@ VantComponent({
     },
     position: {
       type: String,
-      value: 'center'
+      value: 'middle'
     },
     message: String,
     mask: Boolean, // 显示遮罩
