@@ -10,10 +10,4 @@ function rootClass (data) {
   return classes.join(' ')
 }
 
-function rootStyle (data) {
-
-}
-
-
 module.exports.rootClass = rootClass
-module.exports.rootStyle = rootStyle

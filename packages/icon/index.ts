@@ -6,14 +6,10 @@ VantComponent({
       type: String
     },
     size: {
-      type: String,
-      value: '16'
+      type: String || Number,
+      value: '16px'
     },
     icon: String
-  },
-  mounted () { 
-  },
-  data: {
   },
   methods: {
     click (e:WechatMiniprogram.TouchEvent) { 

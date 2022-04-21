@@ -1,0 +1,77 @@
+<mu-cell
+  title="图片模式"
+  isLink
+/>
+
+<mu-image
+  width="100vw"
+  height="100px"
+  src="../../assets/image/3.jpg"
+  fit="contain"
+></mu-image>
+
+<mu-image
+  width="100vw"
+  height="100px"
+  src="../../assets/image/3.jpg"
+  fit="cover"
+></mu-image>
+
+<mu-image
+  width="100vw"
+  height="100px"
+  src="../../assets/image/3.jpg"
+  fit="fill"
+></mu-image>
+
+<mu-cell
+  title="图片模式"
+  value="宽度固定高度自动按宽高比方法放大"
+  isLink
+/>
+
+<mu-image
+  width="100vw"
+  src="../../assets/image/3.jpg"
+  fit="widthFix"
+></mu-image>
+
+<mu-cell
+  title="图片模式"
+  value="高度固定宽度自动按宽高比方法放大"
+  isLink
+/>
+<mu-image
+  height="100px"
+  src="../../assets/image/3.jpg"
+  fit="heightFix"
+></mu-image>
+
+
+<mu-cell
+  title="加载失败"
+  isLink
+/>
+<mu-image
+  height="100px"
+  src="../../assets/image/3ggg.jpg"
+  fit="heightFix"
+  bind:onError="onError"
+  bind:tap="tap"
+></mu-image>
+
+
+<mu-cell
+  title="自定义加载失败"
+  isLink
+/>
+<mu-image
+  height="100px"
+  src="../../assets/image/3ggg.jpg"
+  fit="heightFix"
+  useErrorSlot="{{true}}"
+  bind:onError="onError"
+  bind:tap="tap"
+>
+  <view slot="error">加载失败！</view>
+</mu-image>

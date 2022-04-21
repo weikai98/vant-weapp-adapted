@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mu-image": "../../dist/image",
+    "mu-cell": "../../dist/cell"
+  }
+}

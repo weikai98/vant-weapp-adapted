@@ -41,5 +41,33 @@ function isEmpty (value) {
   return value === '' || value === undefined || value === null
 }
 
+function underline2Hump (key) { 
+  // eslint-disable-next-line no-undef
+  var reg = getRegExp('[A-Z]', "g")
+  return key.replace(reg, function (l) { 
+    return '-' + l.toLowerCase()
+  })
+}
+
+function style (options) {
+  var styleStr = ''
+  if (typeof options === 'object' && options !== null) {
+    object.keys(options).forEach(function (key) { 
+      var v = options[key];
+      styleStr += underline2Hump(key) + ':' + v + ';'
+    })
+  }
+  return styleStr
+}
+
+
+
+function matchUnit (v) { 
+  return v.indexOf('px') > -1
+}
+
 module.exports.bem = bem
 module.exports.isEmpty = isEmpty
+module.exports.style = style
+module.exports.matchUnit = matchUnit
+

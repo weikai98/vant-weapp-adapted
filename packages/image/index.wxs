@@ -1,0 +1,14 @@
+function computedImageFitMode (mode) { 
+  var modeMap = {
+    fill: 'scaleToFill',
+    contain: 'aspectFit',
+    cover: 'aspectFill',
+    widthFix: 'widthFix',
+    heightFix: 'heightFix',
+    none: 'center'
+  }
+  return modeMap[mode] || 'scaleToFill'
+}
+
+module.exports.computedImageFitMode = computedImageFitMode
+

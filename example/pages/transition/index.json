@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "mu-transition": "../../dist/transition/"
+  }
+}

@@ -1,0 +1,41 @@
+<wxs
+  src="../common/wxs/utils.wxs"
+  module="utils"
+/>
+<wxs
+  src="./index.wxs"
+  module="computed"
+/>
+
+
+<view
+  class="{{utils.bem('image')}}"
+  style="{{utils.style({width, height})}}"
+  bind:tap="onClick"
+>
+  <!-- 图片 -->
+  <image
+    wx:if="{{!error}}"
+    class="mu-image__img"
+    src="{{src}}"
+    mode="{{computed.computedImageFitMode(fit)}}"
+    webp="{{true}}"
+    lazy-load="{{lazyLoad}}"
+    binderror="onError"
+  />
+  <!-- 报错 -->
+  <view
+    wx:else
+    class="mu-image__error"
+  >
+    <slot
+      wx:if="{{useErrorSlot}}"
+      name="error"
+    />
+    <mu-icon
+      wx:else
+      size="32"
+      icon="image-fill"
+    />
+  </view>
+</view>
