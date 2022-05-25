@@ -1,6 +1,5 @@
 // 将组件打包，并拷贝到dist目录
 const path = require('path')
-const { exec } = require('child_process')
 
 const gulp = require('gulp');
 const insert = require('gulp-insert');
@@ -8,6 +7,8 @@ const less = require('gulp-less')
 // const postcss = require('gulp-postcss')
 const ts = require('gulp-typescript')
 const rename = require('gulp-rename')
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
 // const reporter = require('gulp-less-reporter')
 // const logger = require('gulp-logger')
 // 避免使用 Node 的 path 类方法来创建 glob，例如 path.join。
@@ -22,7 +23,7 @@ const rename = require('gulp-rename')
 const tsProject = ts.createProject('../../tsconfig.json');
 
 
-
+// const packages = '../../packages'
 const src = '../../packages/**/*'
 // const exampleDist = '../../example/dist/'
 const dist = '../../example/dist/'
@@ -34,37 +35,43 @@ const cleanerTask = () => {
 }
 
 const copierTask = (path, targetPath) => {
+    const targetReg = path.match(/(?<=packages\\).*(?=\\index)/g)
+
   return gulp.src(path)
-    .pipe(gulp.dest(targetPath))
+    .pipe(gulp.dest(targetPath + targetReg[0]))
  }
 
-const lessTask = () => {
-  // Less 文件目前编译有问题 后续采用 lessc 编译
-  // npx lessc .\packages\icon\index.less .\example\dist\icon\index.css
+const lessTask = (event, filePath) => {
+  const targetReg = filePath.match(/(?<=packages\\).*(?=\\index)/g)
+  console.log(targetReg + '.less 文件编译中: ' + new Date())
   return gulp
-    .src(`${src}.less`)
+    .src(path.resolve(__dirname, filePath))
     .pipe(less())
-    // .on('error', reporter)
     .pipe(
       insert.transform((contents, file) => { 
         // 不是common文件夹
-        if (!file.path.includes(`packages${path.sep}common`)) {
-          // 获取相对于当前文件夹的common文件地址
-          const relativePath = path.relative(
-            path.normalize(`${file.path}${path.sep}..`),
-            baseCssPath
-          ).replace(/\\/g, '/')
-          contents = `@import '${relativePath}';\n${contents}`;
+        try { 
+          if (!file.path.includes(`packages${path.sep}common`)) {
+            // 获取相对于当前文件夹的common文件地址
+            const relativePath = path.relative(
+              path.normalize(`${file.path}${path.sep}..`),
+              baseCssPath
+            ).replace(/\\/g, '/')
+            contents = `@import '${relativePath}';\n${contents}`;
+          }
+          return contents
+        } catch (error) {
+          console.log(new Date(), '---', error)
         }
-        return contents
       })
     )
     .pipe(rename({ extname: '.wxss' }))
-    .pipe(gulp.dest(dist))
+    .pipe(gulp.dest(dist + targetReg[0]))
+}
 
- }
-
-const tsTask = () => { 
+const tsTask = (event, filePath) => { 
+  const targetReg = filePath.match(/(?<=packages\\).*(?=\\index)/g)
+  console.log(targetReg + '.ts   文件编译中: ' + new Date())
   return tsProject.src()
     .pipe(tsProject())
     .js
@@ -72,34 +79,32 @@ const tsTask = () => {
 
 }
 
-const wxmlTask = () => {
-  return copierTask(`${src}.wxml`, dist)
+const wxmlTask = (event, path) => {
+  return copierTask(path, dist)
 }
 
-const jsonTask = () => {
-  return copierTask(`${src}.json`, dist)
+const jsonTask = (event, path) => {
+  return copierTask(path, dist)
 }
 
-const wxsTask = () => { 
-  return copierTask(`${src}.wxs`, dist)
+const wxsTask = (event, path) => { 
+  return copierTask(path, dist)
 }
 
 
 exports.buildTask = gulp.series(
   cleanerTask,
-  // lessTask, jsonTask, tsTask, wxmlTask, wxsTask
   gulp.parallel(jsonTask,tsTask, wxmlTask, wxsTask, lessTask)
 )
 
 exports.watchTask = () => {
-  console.time('打包中...')
-
-  console.timeEnd('打包中...')
-  gulp.watch(`${src}.less`, lessTask);
-  gulp.watch(`${src}.wxml`, wxmlTask);
-  gulp.watch(`${src}.json`, jsonTask);
-  gulp.watch(`${src}.ts`, tsTask);
-  gulp.watch(`${src}.wxs`, wxsTask);
-  console.log('watch...')
+  
+  gulp.watch(`${src}.less`).on('all', lessTask);
+  gulp.watch(`${src}.wxml`).on('all', wxmlTask);
+  gulp.watch(`${src}.json`).on('all', jsonTask);
+  gulp.watch(`${src}.ts`).on('all', tsTask);
+  gulp.watch(`${src}.wxs`).on('all', wxsTask);
+  
+  console.log(`watch...${new Date()}`)
 
 }
