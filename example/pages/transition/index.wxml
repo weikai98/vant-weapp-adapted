@@ -1,0 +1,47 @@
+<mu-cell-group inset>
+  <mu-cell
+    title="Fade"
+    isLink
+    data-item="fade"
+    bind:tap="openTransition"
+  ></mu-cell>
+  <mu-cell
+    title="Fade up"
+    isLink
+    data-item="fade-up"
+    bind:tap="openTransition"
+  ></mu-cell>
+  <mu-cell
+    title="Fade down"
+    isLink
+    data-item="fade-down"
+    bind:tap="openTransition"
+  ></mu-cell>
+  <mu-cell
+    title="Slide up"
+    isLink
+    data-item="slide-up"
+    bind:tap="openTransition"
+  ></mu-cell>
+  <mu-cell
+    title="Slide down"
+    isLink
+    data-item="slide-down"
+    bind:tap="openTransition"
+  ></mu-cell>
+</mu-cell-group>
+
+
+
+<mu-transition
+  show="{{show}}"
+  name="{{name}}"
+  bind:beforeEnter="beforeEnter"
+  bind:enter="enter"
+  bind:afterEnter="afterEnter"
+  bind:beforeLeave="beforeLeave"
+  bind:leave="leave"
+  bind:afterLeave="afterLeave"
+>
+  <view class="wrapper"></view>
+</mu-transition>

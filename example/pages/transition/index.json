@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "mu-transition": "../../dist/transition/"
+    "mu-transition": "../../dist/transition",
+    "mu-cell": "../../dist/cell",
+    "mu-cell-group": "../../dist/cell-group"
   }
 }

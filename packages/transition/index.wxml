@@ -1,0 +1,12 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+/>
+
+
+<view
+  wx:if="{{visible}}"
+  class="{{utils.bem('transition')}} {{classes}}"
+>
+  <slot />
+</view>
