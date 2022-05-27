@@ -139,6 +139,25 @@ const content = `module.exports = ${JSON.stringify(exampleMenuList)}
 `
 fs.writeFileSync(exampleMenuListPath, content)
 
+
+const docs = path.resolve(__dirname, '../../docs')
+// 创建 docs md文件
+const docsMD = `# ${chineseName}`
+const docsComponentPath = path.resolve(__dirname, `${docs}/components/${componentname}.md`)
+fs.writeFileSync(docsComponentPath, docsMD)
+
+// 修改 docs .vuepress config.ts 文件
+const vuepressConfig = require(`${docs}/.vuepress/config.ts`)
+// 开发
+const docsConfigPath = path.resolve(__dirname, `${docs}/.vuepress/config.ts`)
+// 组件
+vuepressConfig.themeConfig.sidebar[1].children.push(`/components/${componentname}`)
+
+const vuepressConfigData = `
+  module.exports = ${JSON.stringify(vuepressConfig)}
+`
+fs.writeFileSync(docsConfigPath, vuepressConfigData)
+
 // 打包文件
 const gulpConfig = path.resolve(__dirname, '../gulp/gulp.component.js')
 setTimeout(() => {
