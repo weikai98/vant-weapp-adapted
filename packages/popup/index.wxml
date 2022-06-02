@@ -6,10 +6,17 @@
 
 <mu-modal
   show="{{show}}"
+  transitionName="fade"
+  duration="{{300}}"
   lockScroll="{{lockScroll}}"
   bind:clickMask="onMaskClick"
 >
-  <view class="custom-class {{utils.bem('popup', [position, {round}])}}">
+  <mu-transition
+    show="{{show}}"
+    duration="{{300}}"
+    name="{{position}}"
+    custom-class="custom-class {{utils.bem('popup', [position, {round}])}}"
+  >
     <mu-icon
       wx:if="{{closeable}}"
       size="24"
@@ -18,5 +25,5 @@
       bind:tap="onClockCloseIcon"
     ></mu-icon>
     <slot />
-  </view>
+  </mu-transition>
 </mu-modal>

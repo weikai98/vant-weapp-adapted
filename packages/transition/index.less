@@ -125,7 +125,66 @@
 }
 
 
+// .mu-scale-enter-active,
+// .mu-scale-leave-active {
+//   transition-property: opacity, transform;
+// }
 
+// .mu-scale-enter,
+// .mu-scale-leave-to {
+//   transform: translate3d(-50%, -50%, 0) scale(0.7);
+//   opacity: 0;
+// }
 
+.mu-fade-enter-active,
+.mu-fade-leave-active {
+  transition-property: opacity;
+}
+
+.mu-fade-enter,
+.mu-fade-leave-to {
+  opacity: 0;
+}
+
+.mu-center-enter-active,
+.mu-center-leave-active {
+  transition-property: opacity;
+}
+
+.mu-center-enter,
+.mu-center-leave-to {
+  opacity: 0;
+}
+
+.mu-bottom-enter-active,
+.mu-bottom-leave-active,
+.mu-top-enter-active,
+.mu-top-leave-active,
+.mu-left-enter-active,
+.mu-left-leave-active,
+.mu-right-enter-active,
+.mu-right-leave-active {
+  transition-property: transform;
+}
+
+.mu-bottom-enter,
+.mu-bottom-leave-to {
+  transform: translate3d(0, 100%, 0);
+}
+
+.mu-top-enter,
+.mu-top-leave-to {
+  transform: translate3d(0, -100%, 0);
+}
+
+.mu-left-enter,
+.mu-left-leave-to {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.mu-right-enter,
+.mu-right-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
 
 

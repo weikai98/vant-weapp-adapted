@@ -38,7 +38,9 @@ const copierTask = (filePath, targetPath) => {
 }
 
 const lessTask = (event, filePath) => {
-  const targetReg = filePath.match(/(?<=packages\\).*(?=\\index)?/g)
+  const targetReg = filePath
+    .match(/(?<=packages\\).*(?=\\)?/g)[0]
+    .replace(/\\index.less/, '')
   console.log(targetReg + '.less 文件编译中: ' + new Date())
   return gulp
     .src(path.resolve(__dirname, filePath))
@@ -64,7 +66,7 @@ const lessTask = (event, filePath) => {
       })
     )
     .pipe(rename({ extname: '.wxss' }))
-    .pipe(gulp.dest(path, normalize(`${dist}${targetReg[0]}`)))
+    .pipe(gulp.dest(path.normalize(`${dist}${targetReg}`)))
 }
 
 const tsTask = (event, filePath) => {

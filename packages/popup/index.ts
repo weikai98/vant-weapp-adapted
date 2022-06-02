@@ -1,16 +1,19 @@
-import { VantComponent } from "../common/components";
+import { VantComponent } from '../common/components'
 
 VantComponent({
   props: {
-    show: Boolean, 
+    show: {
+      type: Boolean,
+      value: false
+    },
     zIndex: {
       type: Number,
       value: 10
-    }, 
+    },
     position: {
       type: String,
       value: 'center'
-    }, 
+    },
     mask: {
       type: Boolean,
       value: true
@@ -32,22 +35,22 @@ VantComponent({
     lockScroll: {
       type: Boolean,
       value: true
-    },
+    }
   },
-  mounted () { 
+  mounted() {
     this.open()
   },
   methods: {
-    onClockCloseIcon () { 
+    onClockCloseIcon() {
       this.$emit('close')
     },
-    onMaskClick () {
+    onMaskClick() {
       this.$emit('clickMask')
       if (this.data.closeOnClickMask) {
         this.$emit('close')
       }
     },
-    open () {
+    open() {
       this.$emit('open')
     }
   }

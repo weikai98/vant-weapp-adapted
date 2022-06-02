@@ -21,7 +21,7 @@ export function transition(showDefaultValue: boolean) {
       },
       // @ts-ignore
       duration: {
-        type: null,
+        type: Number || String || Object,
         value: 300,
         observer: 'observeDuration'
       },

@@ -33,6 +33,9 @@ function bem(name, options) {
   // 获取classes
   traversing(classes, options)
   // 拆分拼接
+  console.log(classes, '..............classes')
+  console.log(name, '..............name')
+
   return joinClasses(name, classes)
 }
 

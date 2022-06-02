@@ -4,12 +4,14 @@
 ></wxs>
 
 
-<view
-  wx:if="{{show}}"
-  class="{{ utils.bem('modal', [{transparent}]) }}"
-  style="z-index: {{zIndex}}"
+<mu-transition
+  show="{{show}}"
+  name="{{transitionName}}"
+  duration="{{ duration }}"
+  custom-style="z-index: {{zIndex}}"
+  custom-class="{{ utils.bem('modal', [{transparent}]) }}"
   bind:tap="onMaskClick"
   catch:touchmove="{{lockScroll ? 'touchmove' : ''}}"
 >
   <slot />
-</view>
+</mu-transition>
