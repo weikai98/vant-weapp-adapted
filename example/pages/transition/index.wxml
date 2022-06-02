@@ -18,6 +18,18 @@
     bind:tap="openTransition"
   ></mu-cell>
   <mu-cell
+    title="Fade Left"
+    isLink
+    data-item="fade-left"
+    bind:tap="openTransition"
+  ></mu-cell>
+  <mu-cell
+    title="Fade Right"
+    isLink
+    data-item="fade-right"
+    bind:tap="openTransition"
+  ></mu-cell>
+  <mu-cell
     title="Slide up"
     isLink
     data-item="slide-up"
@@ -29,6 +41,18 @@
     data-item="slide-down"
     bind:tap="openTransition"
   ></mu-cell>
+  <mu-cell
+    title="Slide Left"
+    isLink
+    data-item="slide-left"
+    bind:tap="openTransition"
+  ></mu-cell>
+  <mu-cell
+    title="Slide Right"
+    isLink
+    data-item="slide-right"
+    bind:tap="openTransition"
+  ></mu-cell>
 </mu-cell-group>
 
 
@@ -36,12 +60,15 @@
 <mu-transition
   show="{{show}}"
   name="{{name}}"
+  custom-class="block"
+  enter-class="van-enter-class"
+  enter-active-class="van-enter-active-class"
+  leave-active-class="van-leave-active-class"
+  leave-to-class="van-leave-to-class"
   bind:beforeEnter="beforeEnter"
   bind:enter="enter"
   bind:afterEnter="afterEnter"
   bind:beforeLeave="beforeLeave"
   bind:leave="leave"
   bind:afterLeave="afterLeave"
->
-  <view class="wrapper"></view>
-</mu-transition>
+/>

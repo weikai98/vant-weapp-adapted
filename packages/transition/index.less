@@ -2,7 +2,7 @@
 
 .mu-transition {
   transition-timing-function: ease;
-  transition-duration: 300ms;
+  transition-duration: 500ms;
 }
 // @opt1 隐藏 进入中，离开中
 // @opt2 显示 进入后， 离开前
@@ -30,15 +30,15 @@
 // });
 
 
-.ani(fade-up, {
-  opacity: 0;
-  transition-property: opacity, transform;
-},{
-  transition-property: opacity, transform;
-},{
-  transform: translate(0, 100px);
-  transition-property: opacity, transform;
-});
+// .ani(fade-up, {
+//   opacity: 0;
+//   transition-property: opacity, transform;
+// },{
+//   transition-property: opacity, transform;
+// },{
+//   transform: translate(0, 100px);
+//   transition-property: opacity, transform;
+// });
 // .ani(fade-down);
 // .ani(fade-left);
 // .ani(fade-right);
@@ -48,6 +48,81 @@
 // .ani(slide-left);
 // .ani(slide-right);
 
+.mu-fade-enter-active,
+.mu-fade-leave-active {
+  transition-property: opacity;
+}
+
+.mu-fade-enter,
+.mu-fade-leave-to {
+  opacity: 0;
+}
+
+.mu-fade-up-enter-active,
+.mu-fade-up-leave-active,
+.mu-fade-down-enter-active,
+.mu-fade-down-leave-active,
+.mu-fade-left-enter-active,
+.mu-fade-left-leave-active,
+.mu-fade-right-enter-active,
+.mu-fade-right-leave-active {
+  transition-property: opacity, transform;
+}
+
+.mu-fade-up-enter,
+.mu-fade-up-leave-to {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+}
+
+.mu-fade-down-enter,
+.mu-fade-down-leave-to {
+  transform: translate3d(0, 100%, 0);
+  opacity: 0;
+}
+
+.mu-fade-left-enter,
+.mu-fade-left-leave-to {
+  transform: translate3d(-100%, 0, 0);
+  opacity: 0;
+}
+
+.mu-fade-right-enter,
+.mu-fade-right-leave-to {
+  transform: translate3d(100%, 0, 0);
+  opacity: 0;
+}
+
+.mu-slide-up-enter-active,
+.mu-slide-up-leave-active,
+.mu-slide-down-enter-active,
+.mu-slide-down-leave-active,
+.mu-slide-left-enter-active,
+.mu-slide-left-leave-active,
+.mu-slide-right-enter-active,
+.mu-slide-right-leave-active {
+  transition-property: transform;
+}
+
+.mu-slide-up-enter,
+.mu-slide-up-leave-to {
+  transform: translate3d(0, 100%, 0);
+}
+
+.mu-slide-down-enter,
+.mu-slide-down-leave-to {
+  transform: translate3d(0, -100%, 0);
+}
+
+.mu-slide-left-enter,
+.mu-slide-left-leave-to {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.mu-slide-right-enter,
+.mu-slide-right-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
 
 
 

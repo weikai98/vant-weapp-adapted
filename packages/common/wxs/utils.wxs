@@ -1,68 +1,76 @@
+var array = require('./array.wxs')
+var object = require('./object.wxs')
+var checkType = require('./type.wxs')
 
-var array = require('./array.wxs');
-var object = require('./object.wxs');
-
-
-function traversing (classes, options) {
-  if (!options) return 
+function traversing(classes, options) {
+  if (!options) return
   if (typeof options === 'string' || typeof options === 'number') {
     classes.push(options)
   } else if (array.isArray(options)) {
-    options.forEach(function (v) { 
+    options.forEach(function (v) {
       traversing(classes, v)
     })
-  } else if (typeof options === 'object') { 
-    object.keys(options).forEach(function (v) { 
-      if (options[v]) { 
+  } else if (typeof options === 'object') {
+    object.keys(options).forEach(function (v) {
+      if (options[v]) {
         traversing(classes, v)
       }
     })
   }
 }
- 
-function joinClasses (name, classes) {
+
+function joinClasses(name, classes) {
   name = 'mu-' + name
-  classes = classes.map(function (v) { 
+  classes = classes.map(function (v) {
     return name + '--' + v
   })
   classes.unshift(name)
   return classes.join(' ')
 }
 
-function bem (name, options) { 
+function bem(name, options) {
   var classes = []
   // 获取classes
   traversing(classes, options)
   // 拆分拼接
   return joinClasses(name, classes)
-} 
+}
 
-function isEmpty (value) { 
+function isEmpty(value) {
   return value === '' || value === undefined || value === null
 }
 
-function underline2Hump (key) { 
+function underline2Hump(key) {
   // eslint-disable-next-line no-undef
-  var reg = getRegExp('[A-Z]', "g")
-  return key.replace(reg, function (l) { 
+  var reg = getRegExp('[A-Z]', 'g')
+  return key.replace(reg, function (l) {
     return '-' + l.toLowerCase()
   })
 }
 
-function style (options) {
-  var styleStr = ''
-  if (typeof options === 'object' && options !== null) {
-    object.keys(options).forEach(function (key) { 
-      var v = options[key];
+function style(options) {
+  if (checkType.isObject(options)) {
+    var styleStr = ''
+    object.keys(options).forEach(function (key) {
+      var v = options[key]
       styleStr += underline2Hump(key) + ':' + v + ';'
     })
+    return styleStr
+  } else if (checkType.isArray(options)) {
+    return options
+      .filter(function (item) {
+        return item != null && item !== ''
+      })
+      .map(function (item) {
+        return style(item)
+      })
+      .join(';')
   }
-  return styleStr
+
+  return options
 }
 
-
-
-function matchUnit (v) { 
+function matchUnit(v) {
   return v.indexOf('px') > -1
 }
 
@@ -70,4 +78,3 @@ module.exports.bem = bem
 module.exports.isEmpty = isEmpty
 module.exports.style = style
 module.exports.matchUnit = matchUnit
-

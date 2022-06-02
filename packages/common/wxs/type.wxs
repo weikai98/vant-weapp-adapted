@@ -1,48 +1,45 @@
-function isNumber (target) {
+function isNumber(target) {
   var INSTANCE = 1
   return checkType(target, INSTANCE)
- }
+}
 
-function isString (target) {
+function isString(target) {
   var INSTANCE = ''
   return checkType(target, INSTANCE)
- }
+}
 
-function isBoolean (target) {
+function isBoolean(target) {
   var boolean = true
   return checkType(target, boolean)
 }
- 
-function isObject (target) {
+
+function isObject(target) {
   var INSTANCE = {}
   return checkType(target, INSTANCE)
 }
- 
-function isFunction (target) {
-  var INSTANCE = function () { }
+
+function isFunction(target) {
+  var INSTANCE = function () {}
   return checkType(target, INSTANCE)
 }
- 
- 
-function isArray (target) {
+
+function isArray(target) {
   var INSTANCE = []
   return checkType(target, INSTANCE)
 }
- 
-function isDate (target) {
+
+function isDate(target) {
   var INSTANCE = getDate()
   return checkType(target, INSTANCE)
 }
 
-function isRegexp (target) {
+function isRegexp(target) {
   var INSTANCE = getRegExp()
   return checkType(target, INSTANCE)
 }
- 
 
-
-function checkType (target, INSTANCE) { 
-  return target === INSTANCE.constructor 
+function checkType(target, INSTANCE) {
+  return target.constructor === INSTANCE.constructor
 }
 
 module.exports.isArray = isArray

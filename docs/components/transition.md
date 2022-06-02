@@ -1,4 +1,4 @@
-### transition 设计
+## transition
 
 1. Vue Transition 组件作为单个元素/组件的过渡效果。将其过渡效果应用到其包裹的组件上，而不会渲染额外的 DOM
 
@@ -33,6 +33,17 @@ type TransitionProps = {
 }
 ```
 
+### Events
+
+| 事件名            | 说明       | 参数 |
+| ----------------- | ---------- | ---- |
+| bind:before-enter | 进入前触发 | -    |
+| bind:enter        | 进入中触发 | -    |
+| bind:after-enter  | 进入后触发 | -    |
+| bind:before-leave | 离开前触发 | -    |
+| bind:leave        | 离开中触发 | -    |
+| bind:after-leave  | 离开后触发 | -    |
+
 ### 外部样式类
 
 | 类名               | 说明                                                                                                                                                                |
@@ -44,6 +55,8 @@ type TransitionProps = {
 | leave-class        | 定义离开过渡的开始状态。在离开过渡被触发时立刻生效，下一帧被移除。                                                                                                  |
 | leave-active-class | 定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在过渡/动画完成之后移除。这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。 |
 | leave-to-class     | 定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 leave-class 被删除)，在过渡/动画完成之后移除。                                                     |
+
+### 动画类型
 
 | Name 类型   | Value    |
 | ----------- | -------- |

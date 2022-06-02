@@ -2,11 +2,17 @@
   module="utils"
   src="../common/wxs/utils.wxs"
 />
+<wxs
+  src="./index.wxs"
+  module="computed"
+/>
 
 
 <view
-  wx:if="{{visible}}"
-  class="{{utils.bem('transition')}} {{classes}}"
+  wx:if="{{inited}}"
+  class="{{utils.bem('transition')}} custom-class {{classes}} "
+  style="{{computed.rootStyle({ currentDuration, display, customStyle })}}"
+  bind:transitionend="onTransitionEnd"
 >
   <slot />
 </view>

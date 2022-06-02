@@ -1,0 +1,14 @@
+var utils = require('../common/wxs/utils.wxs')
+
+function rootStyle(data) {
+  return utils.style([
+    {
+      '-webkit-transition-duration': data.currentDuration + 'ms',
+      'transition-duration': data.currentDuration + 'ms',
+      display: data.display ? '' : 'none'
+    },
+    data.customStyle
+  ])
+}
+
+module.exports.rootStyle = rootStyle
