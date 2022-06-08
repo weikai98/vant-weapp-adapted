@@ -1,8 +1,9 @@
-import { VantComponent } from "../common/components";
+import { VantComponent } from '../common/components'
+import { button } from '../mixins/button'
 
 VantComponent({
-  
-  props: { 
+  mixins: [button],
+  props: {
     type: {
       type: String,
       value: 'default'
@@ -13,7 +14,7 @@ VantComponent({
       type: String,
       value: 'normal'
     },
-    
+
     plain: Boolean,
     round: Boolean,
     loading: Boolean,
@@ -23,7 +24,7 @@ VantComponent({
   },
   methods: {
     tap(event: WechatMiniprogram.TouchEvent) {
-      this.$emit('tap', event);
-    },
+      this.$emit('tap', event)
+    }
   }
 })

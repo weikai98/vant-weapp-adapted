@@ -42,8 +42,7 @@
     "docs:build": "vuepress build docs"
   },
   "files": [
-    "dist",
-    "lib"
+    "dist"
   ],
   "repository": "git@github.com:weikai98/vant-weapp-adapted.git",
   "author": "weikaikai <1394987421@qq.com>",

@@ -4,14 +4,16 @@ const path = require('path')
 const gulp = require('gulp')
 const insert = require('gulp-insert')
 const less = require('gulp-less')
+
 // const postcss = require('gulp-postcss')
 const ts = require('gulp-typescript')
 const rename = require('gulp-rename')
 const util = require('util')
-const { normalize } = require('path')
+
 const exec = util.promisify(require('child_process').exec)
 // const reporter = require('gulp-less-reporter')
 // const logger = require('gulp-logger')
+
 // 避免使用 Node 的 path 类方法来创建 glob，例如 path.join。
 // 在 Windows 中，由于 Node 使用 \\ 作为路径分隔符，因此将会产生一个无效的 glob。
 // 还要避免使用 __dirname 和 __filename 全局变量，由于同样的原因，process.cwd() 方法也要避免使用。
@@ -69,7 +71,7 @@ const lessTask = (event, filePath) => {
     .pipe(gulp.dest(path.normalize(`${dist}${targetReg}`)))
 }
 
-const tsTask = (event, filePath) => {
+const tsTask = () => {
   // const targetReg = filePath.match(/(?<=packages\\).*(?=\\index)?/g)
   // console.log(targetReg + '   文件编译中: ' + new Date())
   return tsProject.src().pipe(tsProject()).js.pipe(gulp.dest(dist))
