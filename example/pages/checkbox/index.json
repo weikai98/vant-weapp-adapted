@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "mu-checkbox": "../../dist/checkbox"
+    "mu-checkbox": "../../dist/checkbox",
+    "mu-cell": "../../dist/cell"
   }
 }

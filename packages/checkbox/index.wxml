@@ -1,0 +1,16 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+></wxs>
+
+<view
+  class="{{utils.bem('checkbox', [{border, isChecked: value, disabled}])}} custom-class"
+  bind:tap="onClick"
+>
+  <view class="{{utils.bem('checkbox__icon', [shape,{isChecked: value, disabled}])}}">
+    <view class="{{utils.bem('checkbox__icon__checked',[{isChecked: value, disabled}])}}"></view>
+  </view>
+  <view class="mu-checkbox__label">
+    <slot />
+  </view>
+</view>

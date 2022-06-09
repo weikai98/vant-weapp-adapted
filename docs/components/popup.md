@@ -1,16 +1,12 @@
-## 弹出框
+# 弹出框
 
-### 设计
+## 介绍
 
-1. API 设计
+## 代码演示
 
-   Popup 是一个基础布局组件
+## 设计 (API)
 
-   <!-- Popup-header 用于设置 title 及其按钮 -->
-
-   Popup-body 用于内容呈现
-
-接口参数
+Popup 是一个基础布局组件, Popup-header 用于设置 title 及其按钮, Popup-body 用于内容呈现
 
 ```typescript
 type PropType = {
@@ -35,5 +31,3 @@ type PropType = {
   afterOpen: () => void // 打开后触发
 }
 ```
-
-2.

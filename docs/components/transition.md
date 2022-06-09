@@ -1,4 +1,10 @@
-## 动画
+# 动画
+
+## 介绍
+
+## 代码演示
+
+## 设计 (API)
 
 1. Vue Transition 组件作为单个元素/组件的过渡效果。将其过渡效果应用到其包裹的组件上，而不会渲染额外的 DOM
 
@@ -23,7 +29,7 @@
 3. 在 path 阶段 在子元素上 enter、leave 时机执行不同的钩子函数、添加、删除不同的样式类
 4. 在被包裹的子节点上使用 v-if v-show 进行状态的切换
 
-API
+### Props
 
 ```typescript
 type TransitionProps = {

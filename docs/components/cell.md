@@ -1,31 +1,33 @@
-## 单元格
+# 单元格
 
-1. API 设计
+## 介绍
 
-   Cell 组件是一个基础布局组件。
-   [ 【【图标】【标题】】 【【内容】【图标】】 ]
+## 代码演示
 
-   1. 一般情况下，左侧为标题，右侧为其对应的值
-   2. 左侧、右侧都可以使用插槽自定义内容
+## 设计 (API)
 
-   组件参数
+Cell 组件是一个基础布局组件。
+[ 【【图标】【标题】】 【【内容】【图标】】 ]
 
-   ```typescript
-   type CellProps = {
-     title: string
-     value: string
-     describe: string
-     leftIcon: string
-     rightIcon: string
-     isLink: Boolean
-     border: Boolean
-     tap: (e: Event) => void
-   }
+1.  一般情况下，左侧为标题，右侧为其对应的值
+2.  左侧、右侧都可以使用插槽自定义内容
 
-   type CellSlot = {
-     useTitle: Node
-     useValue: Node
-   }
-   ```
+组件参数
 
-2.
+```typescript
+type CellProps = {
+  title: string
+  value: string
+  describe: string
+  leftIcon: string
+  rightIcon: string
+  isLink: Boolean
+  border: Boolean
+  tap: (e: Event) => void
+}
+
+type CellSlot = {
+  useTitle: Node
+  useValue: Node
+}
+```

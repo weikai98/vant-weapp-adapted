@@ -142,14 +142,21 @@ fs.writeFileSync(exampleMenuListPath, content)
 
 const docs = path.resolve(__dirname, '../../docs')
 // 创建 docs md文件
-const docsMD = `# ${chineseName}`
+const docsMD = `# ${chineseName}
+## 介绍
+
+## 代码演示
+
+## 设计 (API)
+
+`
 const docsComponentPath = path.resolve(__dirname, `${docs}/components/${componentname}.md`)
 fs.writeFileSync(docsComponentPath, docsMD)
 
 // 修改 docs .vuepress config.ts 文件
-const vuepressConfig = require(`${docs}/.vuepress/config.ts`)
+const vuepressConfig = require(`${docs}/.vuepress/config.js`)
 // 开发
-const docsConfigPath = path.resolve(__dirname, `${docs}/.vuepress/config.ts`)
+const docsConfigPath = path.resolve(__dirname, `${docs}/.vuepress/config.js`)
 // 组件
 vuepressConfig.themeConfig.sidebar[1].children.push(`/components/${componentname}`)
 

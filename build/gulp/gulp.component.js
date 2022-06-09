@@ -39,7 +39,35 @@ const copierTask = (filePath, targetPath) => {
   return gulp.src(filePath).pipe(gulp.dest(targetPath))
 }
 
-const lessTask = (event, filePath) => {
+const lessTask = () => { 
+  return gulp
+    .src(`${src}.less`)
+    .pipe(less())
+    .pipe(
+      insert.transform((contents, file) => {
+        // 不是common文件夹
+        try {
+          if (!file.path.includes(`packages${path.sep}common`)) {
+            // 获取相对于当前文件夹的common文件地址
+            const relativePath = path
+              .relative(
+                path.normalize(`${file.path}${path.sep}..`),
+                baseCssPath
+              )
+              .replace(/\\/g, '/')
+            contents = `@import '${relativePath}';\n${contents}`
+          }
+          return contents
+        } catch (error) {
+          console.log(new Date(), '---', error)
+        }
+      })
+    )
+    .pipe(rename({ extname: '.wxss' }))
+    .pipe(gulp.dest(dist))
+}
+
+const onLessWatchTask = (event, filePath) => {
   const targetReg = filePath
     .match(/(?<=packages\\).*(?=\\)?/g)[0]
     .replace(/\\index.less/, '')
@@ -95,7 +123,7 @@ exports.buildTask = gulp.series(
 )
 
 exports.watchTask = () => {
-  gulp.watch(`${src}.less`).on('all', lessTask)
+  gulp.watch(`${src}.less`).on('all', onLessWatchTask)
   gulp.watch(`${src}.wxml`, wxmlTask)
   gulp.watch(`${src}.json`, jsonTask)
   gulp.watch(`${src}.ts`, tsTask)

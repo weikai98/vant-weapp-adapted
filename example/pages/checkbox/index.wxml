@@ -1,0 +1,99 @@
+<mu-cell
+  title="基础用法"
+  border
+/>
+<view class="wrapper">
+  <mu-checkbox
+    value="{{check}}"
+    data-check="check"
+    bind:change="onTap"
+  >勾选</mu-checkbox>
+  <mu-checkbox
+    value="{{check}}"
+    data-check="check"
+    bind:change="onTap"
+  >勾选2</mu-checkbox>
+  <mu-checkbox
+    value="{{check}}"
+    data-check="check"
+    bind:change="onTap"
+  >勾选很长很长冲冲冲错错错错错错错错错错错错错啛啛喳喳出差</mu-checkbox>
+</view>
+
+<mu-cell
+  title="勾选框样式"
+  border
+/>
+<view class="wrapper">
+  <mu-checkbox
+    value="{{check1}}"
+    shape="round"
+    data-check="check1"
+    bind:change="onTap"
+  >圆形</mu-checkbox>
+  <mu-checkbox
+    value="{{check1}}"
+    data-check="check1"
+    bind:change="onTap"
+  >默认方形</mu-checkbox>
+</view>
+
+<mu-cell
+  title="勾选框禁用"
+  border
+/>
+<view class="wrapper">
+  <mu-checkbox
+    value="{{check2}}"
+    data-check="check2"
+    bind:change="onTap"
+  >不禁用</mu-checkbox>
+  <mu-checkbox
+    value="{{check2}}"
+    shape="round"
+    data-check="check2"
+    disabled="{{true}}"
+    bind:change="onTap"
+  >圆形</mu-checkbox>
+  <mu-checkbox
+    value="{{check2}}"
+    data-check="check2"
+    disabled="{{true}}"
+    bind:change="onTap"
+  >默认方形</mu-checkbox>
+</view>
+
+<mu-cell
+  title="勾选框禁用"
+  border
+/>
+<view class="wrapper">
+  <mu-checkbox
+    value="{{check2}}"
+    data-check="check2"
+    border
+    bind:change="onTap"
+  >不禁用</mu-checkbox>
+  <mu-checkbox
+    value="{{check2}}"
+    shape="round"
+    data-check="check2"
+    border
+    bind:change="onTap"
+  >圆形</mu-checkbox>
+  <mu-checkbox
+    value="{{check2}}"
+    shape="round"
+    data-check="check2"
+    disabled="{{true}}"
+    border
+    bind:change="onTap"
+  >圆形</mu-checkbox>
+  <mu-checkbox
+    value="{{check2}}"
+    data-check="check2"
+    disabled="{{true}}"
+    border
+    bind:change="onTap"
+  >默认方形</mu-checkbox>
+</view>
