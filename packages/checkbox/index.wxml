@@ -4,11 +4,12 @@
 ></wxs>
 
 <view
-  class="{{utils.bem('checkbox', [{border, isChecked: value, disabled}])}} custom-class"
+  class="{{utils.bem('checkbox', [direction, { border, isChecked: value, disabled: disabled || parentDisabled }])}} custom-class"
   bind:tap="onClick"
 >
-  <view class="{{utils.bem('checkbox__icon', [shape,{isChecked: value, disabled}])}}">
-    <view class="{{utils.bem('checkbox__icon__checked',[{isChecked: value, disabled}])}}"></view>
+  <view class="{{utils.bem('checkbox__icon', [shape,{ isChecked: value, disabled: disabled || parentDisabled }])}}">
+    <view class="{{utils.bem('checkbox__icon__checked',[{ isChecked: value, disabled: disabled || parentDisabled }])}}">
+    </view>
   </view>
   <view class="mu-checkbox__label">
     <slot />

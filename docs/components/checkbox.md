@@ -23,3 +23,19 @@
 | 事件名      | 说明                     | 回调参数     |
 | ----------- | ------------------------ | ------------ |
 | bind:change | 当绑定值变化时触发的事件 | 当前组件的值 |
+
+#### Checkbox Group Props
+
+| 参数      | 说明                            | 类型    | 默认值     |
+| --------- | ------------------------------- | ------- | ---------- |
+| value     | 绑定 checkbox 值                | array   | --         |
+| disabled  | 是否禁用所有复选框              | boolean | false      |
+| min       | 可被勾选的最小数量              | number  | 0          |
+| max       | 可被勾选的最大数量              | number  | 0 (无限制) |
+| direction | 排列方向 (horizontal、vertical) | string  | horizontal |
+
+#### Checkbox Group Events
+
+| 事件名      | 说明                     | 回调参数     |
+| ----------- | ------------------------ | ------------ |
+| bind:change | 当绑定值变化时触发的事件 | 当前组件的值 |

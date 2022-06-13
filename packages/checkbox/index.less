@@ -7,6 +7,12 @@
   display: inline-flex;
   align-items: center;
   padding: @--padding-base;
+  &--horizontal {
+    display: inline-flex;
+  }
+  &--vertical {
+    display: flex;
+  }
   &--border {
     border: 1px solid @--border-color-base;
     padding: @--padding-base * 2;
@@ -22,7 +28,7 @@
   &__icon {
     position: relative;
     box-sizing: content-box;
-    flex: 1 0 auto;
+    flex: 0 0 auto;
     width: @--checkbox-size;
     height: @--checkbox-size;
     background: @--checkbox-unChecked-background-color;

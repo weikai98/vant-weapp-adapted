@@ -1,0 +1,57 @@
+<mu-cell
+  title="多选框组"
+  border
+/>
+<view class="wrapper">
+  <mu-checkbox-group
+    value="{{checkValue}}"
+    bind:change="onChange"
+  >
+    <mu-checkbox label="check">勾选</mu-checkbox>
+    <mu-checkbox label="check1">勾选2</mu-checkbox>
+    <mu-checkbox label="check2">勾选3</mu-checkbox>
+    <mu-checkbox label="check3">勾选4</mu-checkbox>
+    <mu-checkbox label="check4">勾选5</mu-checkbox>
+    <mu-checkbox label="check5">勾选6</mu-checkbox>
+  </mu-checkbox-group>
+</view>
+
+<mu-cell
+  title="多选框组禁用"
+  border
+/>
+<view class="wrapper">
+  <mu-checkbox-group
+    value="{{checkValue}}"
+    disabled="{{true}}"
+    bind:change="onChange"
+  >
+    <mu-checkbox label="check">勾选</mu-checkbox>
+    <mu-checkbox label="check1">勾选2</mu-checkbox>
+    <mu-checkbox label="check2">勾选3</mu-checkbox>
+    <mu-checkbox label="check3">勾选4</mu-checkbox>
+    <mu-checkbox label="check4">勾选5</mu-checkbox>
+    <mu-checkbox label="check5">勾选6</mu-checkbox>
+  </mu-checkbox-group>
+</view>
+
+
+<mu-cell
+  title="多选框组最大最小禁用"
+  border
+/>
+<view class="wrapper">
+  <mu-checkbox-group
+    value="{{checkValue}}"
+    max="{{3}}"
+    min="{{1}}"
+    bind:change="onChange"
+  >
+    <mu-checkbox label="check">勾选</mu-checkbox>
+    <mu-checkbox label="check1">勾选2</mu-checkbox>
+    <mu-checkbox label="check2">勾选3</mu-checkbox>
+    <mu-checkbox label="check3">勾选4</mu-checkbox>
+    <mu-checkbox label="check4">勾选5</mu-checkbox>
+    <mu-checkbox label="check5">勾选6</mu-checkbox>
+  </mu-checkbox-group>
+</view>
