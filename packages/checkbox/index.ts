@@ -38,17 +38,17 @@ VantComponent({
     },
     setParentValue(parent: TrivialInstance, value: boolean) {
       const parentValue: string[] = [...parent.data.value]
-      const { label } = this.data
+      const { label, name } = this.data
       const { max, min } = parent.data
       if (value) {
         if (max && parentValue.length >= max) return
-        if (parentValue.indexOf(label) === -1) {
-          parentValue.push(label)
+        if (parentValue.indexOf(label || name) === -1) {
+          parentValue.push(label || name)
           this.$emit('change', parentValue, { bubbles: true, composed: true })
         }
       } else {
         if (min && parentValue.length <= min) return
-        const index = parentValue.indexOf(label)
+        const index = parentValue.indexOf(label || name)
         if (index !== -1) {
           parentValue.splice(index, 1)
           this.$emit('change', parentValue, { bubbles: true, composed: true })

@@ -1,0 +1,21 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+></wxs>
+
+<view
+  class="{{utils.bem('radio', [direction, { border, isChecked: value === (name || label), disabled: disabled || parentDisabled }])}} custom-class"
+  bind:tap="onClick"
+>
+  <view
+    class="{{utils.bem('radio__icon', [shape,{ isChecked: value === (name || label), disabled: disabled || parentDisabled }])}}"
+  >
+    <view
+      class="{{utils.bem('radio__icon__checked',[shape, { isChecked: value === (name || label), disabled: disabled || parentDisabled }])}}"
+    >
+    </view>
+  </view>
+  <view class="mu-radio__label">
+    <slot />
+  </view>
+</view>

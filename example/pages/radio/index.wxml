@@ -1,0 +1,101 @@
+<mu-cell
+  title="基础用法"
+  border
+/>
+<view class="wrapper">
+  <mu-radio
+    value="{{check}}"
+    label="check"
+    bind:change="onTap"
+  >勾选</mu-radio>
+  <mu-radio
+    value="{{check}}"
+    label="check1"
+    bind:change="onTap"
+  >勾选2</mu-radio>
+  <mu-radio
+    value="{{check}}"
+    label="check2"
+    bind:change="onTap"
+  >勾选很长很长冲冲冲错错错错错错错错错错错错错啛啛喳喳出差</mu-radio>
+</view>
+
+<mu-cell
+  title="勾选框样式"
+  border
+/>
+<view class="wrapper">
+  <mu-radio
+    value="{{check}}"
+    label="check"
+    shape="square"
+    bind:change="onTap"
+  >方形</mu-radio>
+  <mu-radio
+    value="{{check}}"
+    label="check1"
+    bind:change="onTap"
+  >默认圆形</mu-radio>
+</view>
+
+<mu-cell
+  title="勾选框禁用"
+  border
+/>
+<view class="wrapper">
+  <mu-radio
+    value="{{check}}"
+    label="check"
+    bind:change="onTap"
+  >不禁用</mu-radio>
+  <mu-radio
+    value="{{check}}"
+    shape="round"
+    label="check1"
+    disabled="{{true}}"
+    bind:change="onTap"
+  >圆形</mu-radio>
+  <mu-radio
+    value="{{check}}"
+    label="check2"
+    disabled="{{true}}"
+    bind:change="onTap"
+  >默认方形</mu-radio>
+</view>
+
+<mu-cell
+  title="带有边框"
+  border
+/>
+<view class="wrapper">
+  <mu-radio
+    value="{{check}}"
+    label="check"
+    shape="square"
+    border
+    bind:change="onTap"
+  >不禁用</mu-radio>
+  <mu-radio
+    value="{{check}}"
+    label="check1"
+    shape="round"
+    border
+    bind:change="onTap"
+  >圆形</mu-radio>
+  <mu-radio
+    value="{{check}}"
+    label="check2"
+    shape="round"
+    disabled="{{true}}"
+    border
+    bind:change="onTap"
+  >圆形</mu-radio>
+  <mu-radio
+    value="{{check}}"
+    label="check3"
+    shape="square"
+    disabled="{{true}}"
+    border
+    bind:change="onTap"
+  >方形</mu-radio>
+</view>

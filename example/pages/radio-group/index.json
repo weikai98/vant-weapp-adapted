@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mu-radio": "../../dist/radio",
+    "mu-cell": "../../dist/cell",
+    "mu-radio-group": "../../dist/radio-group"
+  }
+}

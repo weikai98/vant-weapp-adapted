@@ -1,0 +1,34 @@
+<mu-cell
+  title="单选框组"
+  border
+/>
+
+<view class="wrapper">
+
+  <mu-radio-group
+    value="{{check}}"
+    bind:change="onTap"
+  >
+    <mu-radio label="check">勾选</mu-radio>
+    <mu-radio label="check1">勾选2</mu-radio>
+    <mu-radio label="check2">勾选很长很</mu-radio>
+  </mu-radio-group>
+</view>
+
+<mu-cell
+  title="单选框组纵向排列"
+  border
+/>
+
+<view class="wrapper">
+
+  <mu-radio-group
+    value="{{check}}"
+    direction="vertical"
+    bind:change="onTap"
+  >
+    <mu-radio label="check">勾选</mu-radio>
+    <mu-radio label="check1">勾选2</mu-radio>
+    <mu-radio label="check2">勾选很长很</mu-radio>
+  </mu-radio-group>
+</view>

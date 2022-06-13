@@ -64,7 +64,7 @@
 </view>
 
 <mu-cell
-  title="勾选框禁用"
+  title="带有边框"
   border
 />
 <view class="wrapper">
