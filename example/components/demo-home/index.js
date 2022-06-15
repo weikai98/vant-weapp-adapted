@@ -5,5 +5,5 @@ Component({
       type: Array,
       value: []
     },
-  },
+  }
 });

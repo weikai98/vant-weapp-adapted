@@ -2,15 +2,18 @@
 @import '../common/style/mixins/utils.less';
 
 .mu-cell {
-  .flex(row);
+  .flex(row, center, start);
   font-size: @--cell-font-size;
   color: @--cell-font-color;
   box-sizing: border-box;
-  padding: @--padding-base * 3 @--padding-base * 4;
+  padding: @--padding-base * 2 @--padding-base * 4;
   vertical-align: center;
   background: @--color-white;
   &--border {
     border-bottom: @--border-base;
+    &.mu-cell--focus {
+      border-color: @--cell-focus-border-color;
+    }
   }
   &__left {
     .flex(row, center, start);

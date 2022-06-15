@@ -1,7 +1,7 @@
-import { VantComponent } from "../common/components";
+import { VantComponent } from '../common/components'
 
 VantComponent({
-  props: { 
+  props: {
     iconClass: {
       type: String
     },
@@ -9,10 +9,11 @@ VantComponent({
       type: String || Number,
       value: '16px'
     },
-    icon: String
+    icon: String,
+    hidden: Boolean
   },
   methods: {
-    click (e:WechatMiniprogram.TouchEvent) { 
+    click(e: WechatMiniprogram.TouchEvent) {
       this.$emit('tap', e)
     }
   }

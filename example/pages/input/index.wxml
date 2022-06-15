@@ -1,0 +1,142 @@
+  <mu-cell
+    title="配合cell使用"
+    isLink
+  />
+  <mu-cell-group inset>
+    <mu-cell title="基础用法">
+      <mu-input
+        value="{{value}}"
+        slot="useValue"
+        style="flex: 1"
+        placeholder="基础用法"
+        custom-style="padding: 0 8px"
+        border="{{false}}"
+        bind:change="onInputChange"
+      />
+    </mu-cell>
+    <mu-cell title="数字类型">
+      <mu-input
+        value="{{value}}"
+        type="number"
+        slot="useValue"
+        style="flex: 1"
+        placeholder="数字类型"
+        custom-style="padding: 0 8px"
+        border="{{false}}"
+        bind:change="onInputChange"
+      />
+    </mu-cell>
+    <mu-cell title="清除按钮">
+      <mu-input
+        value="{{value}}"
+        slot="useValue"
+        style="flex: 1"
+        placeholder="清除按钮"
+        custom-style="padding: 0 8px"
+        border="{{false}}"
+        clearable
+        bind:change="onInputChange"
+      />
+    </mu-cell>
+    <!-- <mu-cell title="错误提示">
+      <mu-input
+        value="{{value}}"
+        slot="useValue"
+        style="flex: 1"
+        placeholder="错误提示"
+        border="{{false}}"
+        error-message="这是一段错误提示"
+        custom-style="padding: 0 8px"
+      />
+    </mu-cell> -->
+    <mu-cell title="文本域">
+      <mu-input
+        slot="useValue"
+        value="{{value}}"
+        style="flex: 1 0 240px"
+        type="textarea"
+        placeholder="文本域"
+        border="{{false}}"
+        custom-style="padding: 0 8px"
+        bind:change="onInputChange"
+      />
+    </mu-cell>
+  </mu-cell-group>
+
+
+  <mu-cell
+    title="图标与错误提示"
+    isLink
+  />
+
+  <view class="wrapper">
+    <mu-input
+      value="{{value}}"
+      left-icon="ipm-iconaccountbook"
+      custom-style="padding: 8px 0"
+      placeholder="请输入账号"
+      error-message="请输入账号"
+      bind:change="onInputChange"
+    />
+    <mu-input
+      value="{{value}}"
+      custom-style="padding: 8px 0"
+      left-icon="ipm-iconlock-fill"
+      placeholder="请输入账号"
+      error-message="请输入账号"
+      bind:change="onInputChange"
+    />
+  </view>
+
+
+  <mu-cell
+    title="只读与禁用"
+    isLink
+  />
+
+  <view class="wrapper">
+    <mu-input
+      value="{{value}}"
+      disabled="{{true}}"
+      left-icon="ipm-iconaccountbook"
+      custom-style="padding: 8px 0"
+      placeholder="请输入账号"
+      bind:change="onInputChange"
+    />
+    <mu-input
+      value="{{value}}"
+      disabled="{{true}}"
+      custom-style="padding: 8px 0"
+      left-icon="ipm-iconlock-fill"
+      placeholder="请输入账号"
+      bind:change="onInputChange"
+    />
+
+    <mu-input
+      value="{{value}}"
+      slot="useValue"
+      style="flex: 1"
+      custom-style="padding: 8px 0"
+      placeholder="清除按钮"
+      border="{{false}}"
+      clearable
+      border
+      bind:change="onInputChange"
+    />
+  </view>
+
+  <mu-cell-group inset>
+    <mu-cell title="textarea高度自适应">
+      <mu-input
+        value="{{value}}"
+        slot="useValue"
+        style="flex: 1 0 200px"
+        type="textarea"
+        autosize
+        placeholder="textarea高度自适应"
+        custom-style="padding: 0 8px"
+        border="{{false}}"
+        bind:change="onInputChange"
+      />
+    </mu-cell>
+  </mu-cell-group>

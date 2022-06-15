@@ -1,0 +1,9 @@
+page {
+  background: #dddddd;
+}
+ mu-cell-group {
+  margin: 16px;
+ }
+ .wrapper {
+  background: #fff;
+ }

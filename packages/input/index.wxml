@@ -1,0 +1,100 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+></wxs>
+<wxs
+  module="computed"
+  src="./index.wxs"
+></wxs>
+
+
+<view class="{{utils.bem('input')}} custom-class">
+  <view class="{{utils.bem('input__container', [{border, focused}])}}">
+    <mu-cell
+      left-icon="{{leftIcon}}"
+      left-icon-style="{{leftIconStyle}};{{computed.disabled({disabled})}}"
+      border="{{false}}"
+      focus="{{false}}"
+      style="flex:1"
+      custom-style="{{customStyle}}"
+    >
+      <textarea
+        wx:if="{{type === 'textarea'}}"
+        class="{{ utils.bem('input__control', [type, { disabled }]) }} input-class"
+        fixed="{{ fixed }}"
+        focus="{{ focused }}"
+        cursor="{{ cursor }}"
+        value="{{ innerValue }}"
+        auto-focus="{{ focused }}"
+        disabled="{{ disabled || readonly }}"
+        maxlength="{{ maxlength }}"
+        placeholder="{{ placeholder }}"
+        placeholder-style="{{ placeholderStyle }}"
+        placeholder-class="{{ placeholderClass }}"
+        auto-height="{{ !!autosize }}"
+        style="{{ computed.inputStyle(autosize) }}"
+        cursor-spacing="{{ cursorSpacing }}"
+        adjust-position="{{ adjustPosition }}"
+        show-confirm-bar="{{ showConfirmBar }}"
+        hold-keyboard="{{ holdKeyboard }}"
+        selection-end="{{ selectionEnd }}"
+        selection-start="{{ selectionStart }}"
+        disable-default-padding="{{ disableDefaultPadding }}"
+        bindinput="onInput"
+        bindtap="onClickInput"
+        bindblur="onBlur"
+        bindfocus="onFocus"
+        bindconfirm="onConfirm"
+        bindlinechange="onLineChange"
+        bindkeyboardheightchange="onKeyboardHeightChange"
+      />
+
+      <input
+        wx:else
+        class="{{ utils.bem('input__control', [{ disabled }]) }} input-class"
+        type="{{ type }}"
+        focus="{{ focused }}"
+        cursor="{{ cursor }}"
+        value="{{ innerValue }}"
+        auto-focus="{{ focused }}"
+        disabled="{{ disabled || readonly }}"
+        maxlength="{{ maxlength }}"
+        placeholder="{{ placeholder }}"
+        placeholder-style="{{ placeholderStyle }}"
+        placeholder-class="{{ placeholderClass }}"
+        confirm-type="{{ confirmType }}"
+        confirm-hold="{{ confirmHold }}"
+        hold-keyboard="{{ holdKeyboard }}"
+        cursor-spacing="{{ cursorSpacing }}"
+        adjust-position="{{ adjustPosition }}"
+        selection-end="{{ selectionEnd }}"
+        selection-start="{{ selectionStart }}"
+        always-embed="{{ alwaysEmbed }}"
+        password="{{ password || type === 'password' }}"
+        bindinput="onInput"
+        bindtap="onClickInput"
+        bindblur="onBlur"
+        bindfocus="onFocus"
+        bindconfirm="onConfirm"
+        bindkeyboardheightchange="onKeyboardHeightChange"
+      />
+    </mu-cell>
+   
+    <mu-icon
+      hidden="{{!showClearable }}"
+      icon="{{showClearable ? 'close-circle' : ''}}"
+      icon-class="{{showClearable ? 'ipm-iconclose-circle' : ''}}"
+      class="{{utils.bem('input__icon-clear')}}"
+      catchtap="onClear"
+    />
+    <mu-icon
+      wx:if="{{!rightIcon}}"
+      icon="{{ rightIcon}}"
+      icon-class="{{ rightIcon}}"
+      style="{{rightIconStyle}}"
+    />
+  </view>
+  <view wx:if="{{errorMessage}}" class="{{utils.bem('input__error-message')}}">
+    {{errorMessage}}
+  </view>
+</view>

@@ -1,0 +1,22 @@
+var utils = require('../common/wxs/utils.wxs')
+function inputStyle(autosize) {
+  if (autosize && autosize.constructor === 'Object') {
+    return utils.style({
+      'min-height': autosize.minHeight + 'px',
+      'max-height': autosize.maxHeight + 'px'
+    })
+  }
+
+  return ''
+}
+function disabled(opt) {
+  if (opt && opt.constructor === 'Object') {
+    return utils.style({
+      color: opt.disabled ? '#ebedf0' : ''
+    })
+  }
+  return ''
+}
+
+module.exports.inputStyle = inputStyle
+module.exports.disabled = disabled

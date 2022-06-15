@@ -27,7 +27,7 @@ export type VantComponentOptions<
   props?: Props
   relation?: Relation
   methods?: Methods
-
+  observers?: WechatMiniprogram.Component.AllProperty
   // 声明周期
   beforeCreate?: () => void
   created?: () => void

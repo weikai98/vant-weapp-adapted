@@ -1,4 +1,4 @@
-import { VantComponent } from "../common/components";
+import { VantComponent } from '../common/components'
 
 VantComponent({
   options: {
@@ -14,11 +14,15 @@ VantComponent({
     border: {
       type: Boolean,
       value: true
-    }
+    },
+    focus: Boolean,
+    customStyle: String,
+    leftIconStyle: String,
+    rightIconStyle: String
   },
   methods: {
-    click (e: WechatMiniprogram.TouchEvent) {
-      this.$emit('tap', e)
+    click(e: WechatMiniprogram.TouchEvent) {
+      this.$emit('tap', e, { bubbles: true, composed: true })
     }
   }
 })

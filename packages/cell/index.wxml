@@ -5,40 +5,47 @@
 />
 
 <view
-  class="{{ [utils.bem('cell', [{border}])] }}"
-  bind:tap="click"
+  class="{{ [utils.bem('cell', [{border, focus}])] }} custom-class"
+  style="{{customStyle}}"
+  catch:tap="click"
 >
-  <view class="mu-cell__left">
-    <mu-icon
-      wx:if="{{leftIcon}}"
-      icon="{{leftIcon}}"
-      class="mu-cell__left__icon"
-    />
-    <slot name="useLabel"></slot>
-    <view class="mu-cell__left__label">
-      <block wx:if="{{!utils.isEmpty(describe)}}">
-        <view class="mu-cell__left__label__title">
+  <mu-icon
+    wx:if="{{leftIcon}}"
+    icon="{{leftIcon}}"
+    icon-class="{{leftIcon}}"
+    style="{{leftIconStyle}}"
+    class="mu-cell__left__icon"
+  />
+  <slot />
+  <block wx:if="{{title || describe || value}}">
+    <view class="mu-cell__left">
+      <slot name="useLabel"></slot>
+      <view class="mu-cell__left__label">
+        <block wx:if="{{!utils.isEmpty(describe)}}">
+          <view class="mu-cell__left__label__title">
+            {{title}}
+          </view>
+          <view class="mu-cell__left__label__describe">
+            {{describe}}
+          </view>
+        </block>
+        <block wx:else>
           {{title}}
-        </view>
-        <view class="mu-cell__left__label__describe">
-          {{describe}}
-        </view>
-      </block>
-      <block wx:else>
-        {{title}}
-      </block>
+        </block>
+      </view>
     </view>
-  </view>
-  <view class="mu-cell__right">
-    <slot name="useValue"></slot>
-    <view class="mu-cell__right__value">
-      {{value}}
+    <view class="mu-cell__right">
+      <slot name="useValue"></slot>
+      <view class="mu-cell__right__value">
+        {{value}}
+      </view>
     </view>
-    <mu-icon
-      wx:if="{{rightIcon || isLink}}"
-      icon="{{isLink ? 'right' : rightIcon}}"
-      class="mu-cell__right__icon"
-    >
-    </mu-icon>
-  </view>
+  </block>
+  <mu-icon
+    wx:if="{{rightIcon || isLink}}"
+    icon="{{isLink ? 'right' : rightIcon}}"
+    icon-class="{{rightIcon}}"
+    style="{{rightIconStyle}}"
+    class="mu-cell__right__icon"
+  />
 </view>

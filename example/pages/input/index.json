@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mu-input": "../../dist/input",
+    "mu-cell": "../../dist/cell",
+    "mu-cell-group": "../../dist/cell-group"
+  }
+}
