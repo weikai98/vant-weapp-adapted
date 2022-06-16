@@ -1,0 +1,16 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+></wxs>
+
+<mu-input
+  value="{{value}}"
+  right-icon="search"
+  placeholder="{{placeholder}}"
+  custom-class="{{utils.bem('search', [{round, border, focus}])}}"
+  clearable
+  border="{{false}}"
+  bind:change="onChange"
+  bind:blur="onBlur"
+  bind:focus="onFocus"
+/>

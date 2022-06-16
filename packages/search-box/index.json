@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mu-input": "../input/index"
+  }
+}

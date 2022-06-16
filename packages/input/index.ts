@@ -156,7 +156,6 @@ VantComponent({
       this.$emit('click-input', e.detail)
     },
     onClear(e: WechatMiniprogram.TouchEvent) {
-      debugger
       this.value = ''
       this.setShowClearable()
       this.setData({

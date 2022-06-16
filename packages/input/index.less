@@ -3,24 +3,28 @@
 .mu-input {
   display: flex;
   flex-direction: column;
+  font-size: @--font-size-base;
   &__container {
     display: flex;
+    align-items: center;
+    padding: @--padding-base * 2 @--padding-base * 4;
     &--border {
       border-bottom: @--border-base;
       &.mu-input__container--focused {
-        border-color: @--cell-focus-border-color;
+        border-color: @--input-focus-border-color;
+      }
+    }
+    &__icon-left {
+      margin-right: @--margin-base;
+      &--disabled {
+        color: @--background-color-disabled;
       }
     }
   }
-  &__icon-clear {
+  &__icon-right-clear {
     width: 16px;
     display: flex;
     align-items: center;
-  }
-  &__icon {
-    &--disabled {
-      color: @--background-color-disabled;
-    }
   }
   &__control {
     width: 100%;

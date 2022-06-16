@@ -5,7 +5,7 @@
 />
 
 <view
-  class="{{ [utils.bem('cell', [{border, focus}])] }} custom-class"
+  class="{{ [utils.bem('cell', [{border}])] }} custom-class"
   style="{{customStyle}}"
   catch:tap="click"
 >

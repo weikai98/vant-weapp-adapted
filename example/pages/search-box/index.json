@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mu-search-box": "../../dist/search-box",
+    "mu-cell": "../../dist/cell"
+  }
+}

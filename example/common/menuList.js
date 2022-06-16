@@ -23,7 +23,8 @@ module.exports = [
       { path: '/checkbox-group', title: 'checkbox-group 复选框组' },
       { path: '/radio', title: 'radio 单选框' },
       { path: '/radio-group', title: 'radio-group 单选框组' },
-      { path: '/input', title: 'input 输入框' }
+      { path: '/input', title: 'input 输入框' },
+      { path: '/search-box', title: 'search-box 搜索框' }
     ]
   },
   { type: 'notice', groupName: '反馈组件', list: [] },

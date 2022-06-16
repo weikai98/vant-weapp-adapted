@@ -15,7 +15,6 @@ VantComponent({
       type: Boolean,
       value: true
     },
-    focus: Boolean,
     customStyle: String,
     leftIconStyle: String,
     rightIconStyle: String

@@ -1,0 +1,18 @@
+<mu-cell title="基础功能" />
+<view class="wrapper">
+  <mu-search-box
+    value="{{value}}"
+    placeholder="{{placeholder}}"
+    bind:change="onChange"
+  ></mu-search-box>
+</view>
+
+<mu-cell title="方角" />
+<view class="wrapper">
+  <mu-search-box
+    value="{{value}}"
+    placeholder="{{placeholder}}"
+    round="{{false}}"
+    bind:change="onChange"
+  ></mu-search-box>
+</view>

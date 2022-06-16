@@ -115,6 +115,7 @@
     <mu-input
       value="{{value}}"
       slot="useValue"
+      left-icon="search"
       style="flex: 1"
       custom-style="padding: 8px 0"
       placeholder="清除按钮"
