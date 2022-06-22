@@ -1,0 +1,42 @@
+<mu-cell title="基础功能" />
+
+<view class="wrapper">
+  <mu-switch
+    value="{{checked}}"
+    bind:change="onChange"
+  ></mu-switch>
+</view>
+
+<mu-cell title="禁用状态" />
+
+<view class="wrapper">
+  <mu-switch
+    value="{{checked}}"
+    disabled
+    bind:change="onChange"
+  ></mu-switch>
+</view>
+
+<mu-cell title="自定义文字" />
+
+<view class="wrapper">
+  <mu-switch
+    value="{{checked}}"
+    active-text="是"
+    in-active-text="否"
+    bind:change="onChange"
+  ></mu-switch>
+  <mu-switch
+    value="{{checked}}"
+    active-text="√"
+    in-active-text="x"
+    bind:change="onChange"
+  ></mu-switch>
+  <mu-switch
+    value="{{checked}}"
+    active-text="是"
+    in-active-text="否"
+    disabled
+    bind:change="onChange"
+  ></mu-switch>
+</view>

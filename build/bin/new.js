@@ -56,7 +56,12 @@ VantComponent({})`
   },
   {
     filename: 'index.wxml',
-    content: ``
+    content: `
+    <wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+/>
+<view class="{{utils.bem('${componentname}')}}"></view>`
   },
   {
     filename: 'index.wxs',
@@ -92,6 +97,7 @@ const exampleFiles = [
     filename: 'index.json',
     content: `{
   "usingComponents": {
+    "mu-cell": "../../dist/cell",
     "mu-${componentname}": "../../dist/${componentname}"
   }
 }`

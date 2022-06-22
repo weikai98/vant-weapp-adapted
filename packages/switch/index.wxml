@@ -1,0 +1,15 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+/>
+
+<view
+  class="{{utils.bem('switch', [{ checked: value === activeValue, disabled}])}}"
+  bind:tap="onClick"
+>
+  <view class="{{utils.bem('switch__shape', [{ checked: value === activeValue}])}}" />
+  <view
+    wx:if="{{activeText || inActiveText}}"
+    class="{{utils.bem('switch__content', [{ checked: value === activeValue}])}}"
+  >{{ value === activeValue ?  activeText : inActiveText }}</view>
+</view>

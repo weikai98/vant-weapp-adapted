@@ -39,7 +39,7 @@
 | 事件名                    | 说明                       | 回调参数                                              |
 | ------------------------- | -------------------------- | ----------------------------------------------------- |
 | bind:input                | 键盘输入时触发             | event.detail = {value,cursor,keyCode}, keyCode 为键值 |
-| bind:change               | 输入内容时触发             | event.detail = {value,cursor,keyCode}, keyCode 为键值 |
+| bind:change               | 内容变化时触发             | event.detail = {value,cursor,keyCode}, keyCode 为键值 |
 | bind:focus                | 输入框聚焦时触发           | event.detail = {value,height} height 为键盘高度       |
 | bind:blur                 | 输入框失焦时触发           | event.detail = {value,encryptedValue, encryptError}   |
 | bind:confirm              | 点击完成按钮时触发         | event.detail = {value}                                |

@@ -252,3 +252,21 @@
 
 // search
 @--search-background-color: #f4f4f4;
+
+// switch
+@--switch-default-width: 40px;
+@--switch-default-height: 20px;
+@--switch-checked-background-color: @--color-primary;
+@--switch-unChecked-background-color: #c0c4cc;
+@--switch-disabled-checked-background-color: @--color-primary-light-5;
+@--switch-disabled-unChecked-background-color: #ebedf0;
+
+@--switch-shape-size: 18px;
+@--switch-shape-padding: 1px;
+@--switch-shape-unChecked-X: @--switch-shape-padding;
+@--switch-shape-checked-X: @--switch-default-width - @--switch-shape-size -
+  @--switch-shape-padding;
+
+@--switch-shape-content-unChecked-X: @--switch-shape-size +
+  @--switch-shape-padding + @--padding-base;
+@--switch-shape-content-checked-X: @--padding-base + @--switch-shape-padding * 2;
