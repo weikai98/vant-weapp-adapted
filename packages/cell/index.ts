@@ -21,7 +21,7 @@ VantComponent({
   },
   methods: {
     click(e: WechatMiniprogram.TouchEvent) {
-      this.$emit('tap', e, { bubbles: true, composed: true })
+      this.$emit('click', e, { bubbles: true, composed: true })
     }
   }
 })

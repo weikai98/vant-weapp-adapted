@@ -1,4 +1,4 @@
-import { VantComponent } from "../common/components";
+import { VantComponent } from '../common/components'
 
 VantComponent({
   props: {
@@ -19,14 +19,14 @@ VantComponent({
     error: false
   },
   methods: {
-    onError (e: WechatMiniprogram.TouchEvent) { 
+    onError(e: WechatMiniprogram.TouchEvent) {
       this.setData({
         error: true
       })
       this.$emit('onError', e.detail)
     },
-    onClick (e: WechatMiniprogram.TouchEvent) { 
-      this.$emit('tap', e.detail)
+    onClick(e: WechatMiniprogram.TouchEvent) {
+      this.$emit('click', e.detail)
     }
   }
 })
