@@ -4,7 +4,7 @@
 />
 
 <button
-  class="{{ [utils.bem('button', [type, size, {block, round, plain, circle, loading, disabled, unclickable: disabled || loading }])] }}"
+  class="{{ [utils.bem('button', [type, size, {block, round, plain, circle, loading, text, disabled, unclickable: disabled || loading }])] }}"
   open-type="{{ disabled || loading || (canIUseGetUserProfile && openType === 'getUserInfo') ? '' : openType }}"
   business-id="{{ businessId }}"
   session-from="{{ sessionFrom }}"

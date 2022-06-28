@@ -1,0 +1,23 @@
+<mu-cell title="基础功能" />
+<view class="wrapper">
+  <mu-date-picker
+    title="选择日期"
+    value="{{currentDate}}"
+    bind:change="onChange"
+    bind:confirm="onConfirm"
+    bind:cancel="onCancel"
+  ></mu-date-picker>
+</view>
+
+<mu-cell title="日期范围限制" />
+<view class="wrapper">
+  <mu-date-picker
+    title="选择日期"
+    value="{{currentDate}}"
+    max-date="{{maxDate}}"
+    min-date="{{minDate}}"
+    bind:change="onChange"
+    bind:confirm="onConfirm"
+    bind:cancel="onCancel"
+  ></mu-date-picker>
+</view>

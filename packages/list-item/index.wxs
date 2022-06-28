@@ -1,0 +1,5 @@
+function computedFields (item, fields, key) { 
+  return item[fields[key] || key]
+}
+
+module.exports.computedFields = computedFields

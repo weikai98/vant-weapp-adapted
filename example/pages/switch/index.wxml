@@ -22,7 +22,7 @@
 <view class="wrapper">
   <mu-switch
     value="{{checked}}"
-    active-text="是"
+    active-text="hh"
     in-active-text="否"
     bind:change="onChange"
   ></mu-switch>

@@ -1,0 +1,35 @@
+<mu-cell title="基础功能" />
+<view class="wrapper">
+  <mu-picker
+    title="标题"
+    columns="{{columns}}"
+    bind:change="onChange"
+    bind:confirm="onConfirm"
+    bind:cancel="onCancel"
+  ></mu-picker>
+</view>
+
+
+
+<mu-cell title="多列数据" />
+<view class="wrapper">
+  <mu-picker
+    title="标题"
+    columns="{{columns1}}"
+    bind:change="onChange"
+    bind:confirm="onConfirm"
+    bind:cancel="onCancel"
+  ></mu-picker>
+</view>
+
+
+<mu-cell title="默认选中" />
+<view class="wrapper">
+  <mu-picker
+    title="标题"
+    columns="{{columns2}}"
+    bind:change="onChange"
+    bind:confirm="onConfirm"
+    bind:cancel="onCancel"
+  ></mu-picker>
+</view>

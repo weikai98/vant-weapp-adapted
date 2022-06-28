@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mu-button": "../button",
+    "mu-picker-column": "../picker-column"
+  }
+}

@@ -12,8 +12,8 @@
 | ------------- | -------------- | ----------------------- | ------ |
 | value         | 开关打开状态   | boolean、string、number | false  |
 | disabled      | 是否禁用       | boolean                 | false  |
-| activeText    | 打开时的文字   | string                  | --     |
-| inActiveText  | 关闭时的文字   | string                  | --     |
+| activeText    | 打开时的文字   | string (只支持一个字符) | --     |
+| inActiveText  | 关闭时的文字   | string (只支持一个字符) | --     |
 | activeValue   | 打开时的绑定值 | boolean、string、number | true   |
 | inActiveValue | 关闭时的绑定值 | boolean、string、number | false  |
 

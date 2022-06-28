@@ -1,0 +1,34 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+/>
+<wxs
+  module="computed"
+  src="./index.wxs"
+></wxs>
+
+<view
+  class="{{utils.bem('picker-column')}}"
+  catch:touchstart="onStart"
+  catch:touchmove="onMove"
+  catch:touchend="onEnd"
+>
+  <view
+    class="{{utils.bem('picker-column__wrapper')}}"
+    style="{{computed.computedHeight({visibleItemCount, itemHeight})}};{{computed.computedTransform(deltY, duration)}}"
+  >
+    <mu-list-item
+      wx:for="{{columns}}"
+      wx:key="index"
+      class="{{utils.bem('picker-column__list')}}"
+      item="{{item}}"
+      style="height:{{itemHeight}}px"
+      fields="{{fields}}"
+    />
+  </view>
+
+  <view
+    class="{{utils.bem('picker-column__focus')}}"
+    style="height:{{itemHeight}}px"
+  />
+</view>

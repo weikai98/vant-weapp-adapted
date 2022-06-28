@@ -104,6 +104,13 @@ const tsTask = () => {
   // console.log(targetReg + '   文件编译中: ' + new Date())
   return tsProject.src().pipe(tsProject()).js.pipe(gulp.dest(dist))
 }
+// const onTsWatchTask = (event, filePath) => {
+//   const targetReg = filePath
+//     .match(/(?<=packages\\).*(?=\\)?/g)[0]
+//     .replace(/\\\w{1,}.ts/, '')
+//   console.log(targetReg + ' ts文件编译中: ' + new Date())
+//   return tsProject.src().pipe(tsProject()).js.pipe(gulp.dest(dist))
+// }
 
 const wxmlTask = () => {
   return copierTask(`${src}.wxml`, dist)
@@ -126,6 +133,16 @@ const jsonTask = () => {
 const wxsTask = () => {
   return copierTask(`${src}.wxs`, dist)
 }
+const onWxsWatchTask = (event, filePath) => {
+  const targetReg = filePath
+    .match(/(?<=packages\\).*(?=\\)?/g)[0]
+    .replace(/\\\w{1,}.wxs/, '')
+  console.log(targetReg + ' wxs文件编译中: ' + new Date())
+  return copierTask(
+    path.resolve(__dirname, filePath),
+    path.normalize(`${dist}${targetReg}`)
+  )
+}
 
 exports.buildTask = gulp.series(
   cleanerTask,
@@ -137,7 +154,7 @@ exports.watchTask = () => {
   gulp.watch(`${src}.wxml`).on('all', onWxmlWatchTask)
   gulp.watch(`${src}.json`, jsonTask)
   gulp.watch(`${src}.ts`, tsTask)
-  gulp.watch(`${src}.wxs`, wxsTask)
+  gulp.watch(`${src}.wxs`).on('all', onWxsWatchTask)
 
   console.log(`watch...${new Date()}`)
 }

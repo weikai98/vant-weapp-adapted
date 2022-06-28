@@ -1,0 +1,26 @@
+var checkType = require('../common/wxs/type.wxs')
+var utils = require('../common/wxs/utils.wxs')
+function computedFields (item, fields, key) { 
+  return item[fields[key] || key]
+}
+
+
+function computedHeight (opt) {
+  if (checkType.isNumber(opt.itemHeight) && checkType.isNumber(opt.visibleItemCount)) { 
+    return utils.style({
+      'max-height': opt.itemHeight * opt.visibleItemCount + 'px',
+      'height': opt.itemHeight * opt.visibleItemCount + 'px'
+    })
+  }
+  return ''
+}
+
+function computedTransform (Y, duration) {
+  return utils.style({
+      transform: 'translateY(calc(50% ' + Y + 'px))',
+      transition: 'transform '+ duration +'ms'
+    })
+}
+module.exports.computedTransform = computedTransform
+module.exports.computedHeight = computedHeight
+module.exports.computedFields = computedFields

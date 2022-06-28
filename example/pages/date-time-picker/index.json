@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mu-cell": "../../dist/cell",
+    "mu-date-picker": "../../dist/date-time-picker"
+  }
+}

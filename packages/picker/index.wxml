@@ -1,0 +1,40 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+/>
+<wxs
+  module="computed"
+  src="./index.wxs"
+></wxs>
+
+<view class="{{utils.bem('picker')}}">
+  <view
+    wx:if="{{showToolbar}}"
+    class="{{utils.bem('picker__header')}}"
+  >
+    <mu-button
+      text
+      bind:click="onCancel"
+    >{{cancelButtonText}}</mu-button>
+    <view class="mu-picker__header__title">{{title}}</view>
+    <mu-button
+      text
+      type="primary"
+      bind:click="onConfirm"
+    >{{confirmButtonText}}</mu-button>
+  </view>
+  <view class="{{utils.bem('picker__body')}}">
+    <mu-picker-column
+      wx:for="{{levelListMap}}"
+      wx:key="index"
+      level="{{index}}"
+      columns="{{item}}"
+      active-index="{{activeIndexMap[index] || 0}}"
+      item-height="{{itemHeight}}"
+      visible-item-count="{{visibleItemCount}}"
+      fields="{{fields}}"
+      class="{{utils.bem('picker__body__column')}}"
+      :change="onChange"
+    />
+  </view>
+</view>

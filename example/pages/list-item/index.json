@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mu-cell": "../../dist/cell",
+    "mu-list-item": "../../dist/list-item"
+  }
+}

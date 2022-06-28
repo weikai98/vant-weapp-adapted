@@ -1,0 +1,18 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+/>
+
+<view class="{{utils.bem('date-time-picker')}}">
+  <mu-picker
+    title="{{title}}"
+    columns="{{dateColumns}}"
+    showToolbar="{{showToolbar}}"
+    confirm-button-text="{{confirmButtonText}}"
+    cancel-button-text="{{cancelButtonText}}"
+    visible-item-count="{{visibleItemCount}}"
+    bind:change="onChange"
+    bind:confirm="onConfirm"
+    bind:cancel="onCancel"
+  />
+</view>

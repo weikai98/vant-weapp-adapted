@@ -165,6 +165,16 @@ const docsMD = `# ${chineseName}
 
 ## 设计 (API)
 
+#### ${componentname} Props
+
+| 参数          | 说明           | 类型                    | 默认值 |
+| ------------- | -------------- | ----------------------- | ------ |
+
+#### ${componentname} Events
+
+| 事件名      | 说明               | 回调参数                     |
+| ----------- | ------------------ | ---------------------------- |
+
 `
 const docsComponentPath = path.resolve(
   __dirname,

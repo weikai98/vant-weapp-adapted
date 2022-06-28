@@ -14,7 +14,7 @@ VantComponent({
       type: String,
       value: 'normal'
     },
-
+    text: Boolean,
     plain: Boolean,
     round: Boolean,
     loading: Boolean,
@@ -24,7 +24,7 @@ VantComponent({
   },
   methods: {
     tap(event: WechatMiniprogram.TouchEvent) {
-      this.$emit('tap', event)
+      this.$emit('click', event)
     }
   }
 })
