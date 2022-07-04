@@ -3,21 +3,22 @@
 
 .popup-position(@position) {
   @{position}: 0;
-}; 
+}
 .popup-size(@width, @height) {
   width: @width;
   height: @height;
-};
+}
 .popup-radius(@p1, @p2) {
   border-@{p1}-radius: @--border-radius-large;
   border-@{p2}-radius: @--border-radius-large;
-};
+}
 
 .popup-radius() {
   border-radius: @--border-radius-large;
-};
+}
 
-.popup__close-icon__outside-position (@Left_Right, @Top_Bottom, @customValue: @--popup-close-icon-margin) {
+.popup__close-icon__outside-position
+  (@Left_Right, @Top_Bottom, @customValue: @--popup-close-icon-margin) {
   .flex();
   height: @--popup-close-icon-size;
   width: @--popup-close-icon-size;
@@ -37,6 +38,8 @@
 .mu-popup {
   background: @--color-white;
   position: absolute;
+  overflow-y: auto;
+  overflow-x: hidden;
   &--bottom {
     .popup-position(bottom);
     .popup-size(@--100, @--popup-default-height);
@@ -48,7 +51,7 @@
       &--left {
         left: @--popup-close-icon-margin;
         top: @--popup-close-icon-margin;
-        &.mu-popup__close-icon--outsideCloseIcon{
+        &.mu-popup__close-icon--outsideCloseIcon {
           .popup__close-icon__outside-position(left, top);
         }
       }
@@ -137,7 +140,6 @@
         }
       }
     }
-
   }
   &--right {
     .popup-position(right);

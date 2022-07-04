@@ -1,0 +1,6 @@
+.drop-down__item {
+  width: 100%;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,58 @@
+<mu-cell title="基础用法" />
+<view class="wrapper">
+  <mu-drop-down
+    caption="{{caption}}"
+    options="{{options}}"
+    popup-style="height:20%;"
+    bind:change="onChange"
+  />
+</view>
+
+<!-- <mu-cell title="向上展开" />
+<view class="wrapper">
+  <mu-drop-down
+    caption="{{caption}}"
+    direction="up"
+    drop-height="auto"
+    options="{{options}}"
+  />
+</view> -->
+
+<mu-cell title="自定义菜单内容" />
+<view class="wrapper">
+  <mu-drop-down
+    caption="{{caption}}"
+    popup-style="height:auto;"
+    bind:change="onChange"
+  >
+    <view
+      wx:for="{{options}}"
+      wx:key="index"
+      class="drop-down__item"
+      bind:tap="onOptionItemClick"
+    >{{item.label}}</view>
+  </mu-drop-down>
+</view>
+
+
+<mu-cell title="禁用" />
+<view class="wrapper">
+  <mu-drop-down
+    caption="{{caption}}"
+    popup-style="height:auto;"
+    disabled
+    options="{{options}}"
+    bind:change="onChange"
+  />
+</view>
+
+<mu-cell title="多选" />
+<view class="wrapper">
+  <mu-drop-down
+    caption="{{caption}}"
+    popup-style="height:auto;"
+    multiple
+    options="{{options}}"
+    bind:change="onChange"
+  />
+</view>

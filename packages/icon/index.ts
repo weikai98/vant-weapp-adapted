@@ -9,6 +9,7 @@ VantComponent({
       type: String || Number,
       value: '16px'
     },
+    color: String,
     icon: String,
     hidden: Boolean
   },

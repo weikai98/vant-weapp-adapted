@@ -2,27 +2,27 @@
 <mu-cell
   title="show top Popup"
   isLink
-  bind:tap="showTop"
+  bind:click="showTop"
 ></mu-cell>
 <mu-cell
   title="show bottom Popup"
   isLink
-  bind:tap="showBottom"
+  bind:click="showBottom"
 ></mu-cell>
 <mu-cell
   title="show left Popup"
   isLink
-  bind:tap="showLeft"
+  bind:click="showLeft"
 ></mu-cell>
 <mu-cell
   title="show right Popup"
   isLink
-  bind:tap="showRight"
+  bind:click="showRight"
 ></mu-cell>
 <mu-cell
   title="show center Popup"
   isLink
-  bind:tap="showCenter"
+  bind:click="showCenter"
 ></mu-cell>
 
 <mu-popup
@@ -40,7 +40,7 @@
   title="show bottom Popup"
   isLink
   closeable
-  bind:tap="showCloseable"
+  bind:click="showCloseable"
 ></mu-cell>
 <mu-popup
   show="{{closeablePopupVisiable}}"
@@ -58,7 +58,7 @@
 <mu-cell
   title="show bottom Popup"
   isLink
-  bind:tap="showRound"
+  bind:click="showRound"
 ></mu-cell>
 <mu-popup
   show="{{roundPopupVisiable}}"

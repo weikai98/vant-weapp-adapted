@@ -1,0 +1,13 @@
+<mu-cell title="基础用法" />
+<view class="wrapper">
+  <mu-drop-down-group>
+    <mu-drop-down
+      caption="{{caption}}"
+      options="{{options}}"
+    ></mu-drop-down>
+    <mu-drop-down
+      caption="{{caption2}}"
+      options="{{options2}}"
+    ></mu-drop-down>
+  </mu-drop-down-group>
+</view>

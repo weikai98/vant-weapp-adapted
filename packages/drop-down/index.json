@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mu-button": "../button",
+    "mu-icon": "../icon",
+    "mu-cell": "../cell",
+    "mu-popup": "../popup"
+  }
+}

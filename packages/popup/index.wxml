@@ -8,6 +8,8 @@
   show="{{show}}"
   transitionName="fade"
   duration="{{300}}"
+  z-index="{{zIndex}}"
+  custom-class="custom-class"
   lockScroll="{{lockScroll}}"
   bind:clickMask="onMaskClick"
 >
@@ -15,7 +17,9 @@
     show="{{show}}"
     duration="{{300}}"
     name="{{position}}"
-    custom-class="custom-class {{utils.bem('popup', [position, {round}])}}"
+    z-index="{{zIndex}}"
+    custom-style="{{customStyle}}"
+    custom-class="{{utils.bem('popup', [position, {round}])}}"
   >
     <mu-icon
       wx:if="{{closeable}}"

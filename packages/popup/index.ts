@@ -35,6 +35,10 @@ VantComponent({
     lockScroll: {
       type: Boolean,
       value: true
+    },
+    customStyle: {
+      type: String,
+      value: ''
     }
   },
   mounted() {

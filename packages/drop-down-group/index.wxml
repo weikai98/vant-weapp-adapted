@@ -1,0 +1,7 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+/>
+<view class="{{utils.bem('drop-down-group')}}">
+  <slot />
+</view>

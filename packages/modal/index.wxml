@@ -9,7 +9,7 @@
   name="{{transitionName}}"
   duration="{{ duration }}"
   custom-style="z-index: {{zIndex}}"
-  custom-class="{{ utils.bem('modal', [{transparent}]) }}"
+  custom-class="{{ utils.bem('modal', [{transparent}]) }} custom-class"
   bind:tap="onMaskClick"
   catch:touchmove="{{lockScroll ? 'touchmove' : ''}}"
 >

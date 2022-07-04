@@ -1,5 +1,5 @@
 <view class="button">
-  <view>按钮类型</view>
+  <mu-cell title="按钮类型" />
   <view class="button-wrapper">
     <mu-button>默认按钮</mu-button>
     <mu-button type="primary">主要按钮</mu-button>
@@ -9,7 +9,7 @@
     <mu-button type="danger">危险按钮</mu-button>
   </view>
 
-  <view>朴素按钮</view>
+  <mu-cell title="朴素按钮" />
   <view class="button-wrapper">
     <mu-button plain>朴素按钮</mu-button>
     <mu-button
@@ -34,7 +34,7 @@
     >危险按钮</mu-button>
   </view>
 
-  <view>圆角按钮</view>
+  <mu-cell title="圆角按钮" />
   <view class="button-wrapper">
     <mu-button round>圆角按钮</mu-button>
     <mu-button
@@ -59,7 +59,7 @@
     >危险按钮</mu-button>
   </view>
 
-  <view>图标按钮</view>
+  <mu-cell title="图标按钮" />
   <view class="button-wrapper">
     <mu-button icon="search"></mu-button>
     <mu-button
@@ -97,7 +97,7 @@
     ></mu-button>
   </view>
 
-  <view>大小按钮</view>
+  <mu-cell title="大小按钮" />
   <view class="button-wrapper">
     <mu-button>默认按钮</mu-button>
     <mu-button
@@ -110,7 +110,7 @@
     >小型按钮</mu-button>
   </view>
 
-  <view>禁用状态</view>
+  <mu-cell title="禁用状态" />
   <view class="button-wrapper">
     <mu-button>禁用状态</mu-button>
     <mu-button
@@ -135,7 +135,7 @@
     >危险按钮</mu-button>
   </view>
 
-  <view>加载状态</view>
+  <mu-cell title="加载状态" />
   <view class="button-wrapper">
     <mu-button loading>加载中...</mu-button>
     <mu-button
@@ -144,7 +144,7 @@
     >自定义信息</mu-button>
   </view>
 
-  <view>文字按钮</view>
+  <mu-cell title="文字按钮" />
   <view class="button-wrapper">
     <mu-button
       type="primary"
@@ -156,6 +156,14 @@
       text
       disabled
     >禁用文字主要按钮</mu-button>
+    <mu-button
+      type="primary"
+      text
+    >
+      文字主要按钮
+      <mu-icon icon="search" />
+    </mu-button>
   </view>
+
 
 </view>

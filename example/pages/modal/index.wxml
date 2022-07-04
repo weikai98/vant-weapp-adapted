@@ -1,6 +1,6 @@
 <mu-cell
   title="显示Mask"
-  bind:tap="openMask"
+  bind:click="openMask"
   isLink
 ></mu-cell>
 

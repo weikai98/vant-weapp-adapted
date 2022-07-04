@@ -12,7 +12,7 @@
   wx:if="{{inited}}"
   class="{{utils.bem('transition')}} custom-class {{classes}} "
   style="{{computed.rootStyle({ currentDuration, display, customStyle })}}"
-  bind:transitionend="onTransitionEnd"
+  catch:transitionend="onTransitionEnd"
 >
   <slot />
 </view>

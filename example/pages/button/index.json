@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "mu-cell": "../../dist/cell",
     "mu-button": "../../dist/button/index",
     "mu-icon": "../../dist/icon/index"
   }

@@ -3,55 +3,55 @@
     title="Fade"
     isLink
     data-item="fade"
-    bind:tap="openTransition"
+    bind:click="openTransition"
   ></mu-cell>
   <mu-cell
     title="Fade up"
     isLink
     data-item="fade-up"
-    bind:tap="openTransition"
+    bind:click="openTransition"
   ></mu-cell>
   <mu-cell
     title="Fade down"
     isLink
     data-item="fade-down"
-    bind:tap="openTransition"
+    bind:click="openTransition"
   ></mu-cell>
   <mu-cell
     title="Fade Left"
     isLink
     data-item="fade-left"
-    bind:tap="openTransition"
+    bind:click="openTransition"
   ></mu-cell>
   <mu-cell
     title="Fade Right"
     isLink
     data-item="fade-right"
-    bind:tap="openTransition"
+    bind:click="openTransition"
   ></mu-cell>
   <mu-cell
     title="Slide up"
     isLink
     data-item="slide-up"
-    bind:tap="openTransition"
+    bind:click="openTransition"
   ></mu-cell>
   <mu-cell
     title="Slide down"
     isLink
     data-item="slide-down"
-    bind:tap="openTransition"
+    bind:click="openTransition"
   ></mu-cell>
   <mu-cell
     title="Slide Left"
     isLink
     data-item="slide-left"
-    bind:tap="openTransition"
+    bind:click="openTransition"
   ></mu-cell>
   <mu-cell
     title="Slide Right"
     isLink
     data-item="slide-right"
-    bind:tap="openTransition"
+    bind:click="openTransition"
   ></mu-cell>
 </mu-cell-group>
 

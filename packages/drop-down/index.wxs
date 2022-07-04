@@ -1,0 +1,14 @@
+var utils = require('../common/wxs/utils.wxs')
+
+function computedFoldIcon (fold) {
+  return fold ? 'up' : 'down'
+}
+function transform (len, isFold) {
+  if (isFold) return ''
+  return utils.style({
+    transform: 'translateY(-' + len * 48  +'px)'
+  })
+}
+
+module.exports.transform = transform
+module.exports.computedFoldIcon = computedFoldIcon

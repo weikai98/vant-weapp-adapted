@@ -1,0 +1,41 @@
+<wxs
+  module="utils"
+  src="../common/wxs/utils.wxs"
+/>
+<wxs
+  module="computed"
+  src="./index.wxs"
+/>
+
+<view class="{{utils.bem('drop-down')}}">
+
+  <mu-button
+    text
+    disabled="{{disabled}}"
+    type="{{isFold ? 'primary' : 'default'}}"
+    bind:tap="onTitleClick"
+  >
+    {{caption}}
+    <mu-icon icon="{{computed.computedFoldIcon(isFold)}}" />
+  </mu-button>
+  <view class="{{utils.bem('drop-down__options')}}">
+    <mu-popup
+      show="{{isFold}}"
+      position="top"
+      z-index="{{100}}"
+      custom-style="{{popupStyle}}"
+      custom-class="{{utils.bem('drop-down__modal')}}"
+      bind:clickMask="onMaskClick"
+    >
+      <mu-cell
+        wx:for="{{options}}"
+        wx:key="index"
+        title="{{item.label}}"
+        right-icon="{{item.check ? 'check' :''}}"
+        data-item="{{item}}"
+        catch:click="onOptionItemClick"
+      />
+      <slot />
+    </mu-popup>
+  </view>
+</view>
